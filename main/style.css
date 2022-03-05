@@ -1,0 +1,1519 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --topic-color: #170f23;
+    --buttom-color: #7200a1;
+    --link-text-hover: #c662ef;
+    --Subtitles-color: #8b8791;
+    --category-color: #231b2e;
+    --text-color: #d4dada;
+    --box-item-bg: hsla(0,0%,100%,0.1);
+    --webpage-height: 88.1vh;
+    --text-secondary: hsla(0,0%,100%,0.5);
+    --linear-gradient-bg: linear-gradient(180deg,#740091,#2d1a4c);
+}
+
+.category__active {
+    background-color: #393243;
+    border-left: 3px solid var(--buttom-color);
+    /* display: block; */
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 20px;
+    display: block;
+}
+
+.hover:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    display: flex;
+}
+
+#category {
+    width: 15%;
+    background-color: var(--category-color);
+    color: var(--text-color);
+    height: var(--webpage-height);
+    position: relative;
+}
+
+.mp-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.library-text {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+#topic {
+    width: 65%;
+    background-color: var(--topic-color);
+    height: var(--webpage-height);
+}
+
+.topic-header {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+}
+
+.topic-header__icon {
+    font-size: 18px;
+    margin: 0 30px;
+}
+
+.topic-header__icon i {
+    padding: 0 10px;
+}
+
+.search {
+    display: flex;
+    text-align: center;
+    flex: auto;
+}
+
+.search-icon {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 20px 0px 0px 20px;
+    font-size: 20px;
+}
+
+.search-input {
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border: none;
+    width: 540px;
+    border-radius: 0 20px 20px 0;
+    font-size: 14px;
+    outline: none;
+    color: var(--text-color);
+}
+
+.search-input::placeholder {
+    color: rgba(207, 207, 207, 0.822);
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.level-member {
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+.level-icon {
+    padding: 12px;
+    background-color:rgba(255, 255, 255, 0.123);
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.category-logo__img {
+    width: 126px;
+    margin: 13px 26px;
+}
+
+.category__napbar-item {
+    padding: 9px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.category-live {
+    display: flex;
+}
+
+.category-live-active {
+    font-size: 12px;
+    padding: 2px;
+    margin-left: 6px;
+    background-color:red;
+    border-radius: 4px;
+    left: 100px;
+    line-height: 16px;
+}
+
+
+.new-playlist {
+    background-color: var(--category-color);
+    position: absolute;
+    bottom: 0;
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid rgb(80, 80, 80);
+    justify-content: center;
+}
+
+.new-playlist__text {
+    color: var(--text-color);
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.seperate {
+    border-top: 1px solid rgb(80, 80, 80) ;
+    margin: 10px auto;
+    width: 200px;
+
+}
+
+.slide-genre {
+    height: 330px;
+    overflow-y: auto;
+}
+
+.slide-genre::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+}
+
+.upgrade {
+    background-image: linear-gradient(to right, #604de7, #b968d9);
+    width: 210px;
+    height: 110px;
+    border-radius: 8px;
+    margin: 16px auto;
+    font-size: 12px;
+}
+
+.upgrade-text {
+    font-weight: 600;
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.upgrade-vip {
+    padding: 10px 20px;
+    background-color: gold;
+    width: 160px;
+    height: 30px;
+    border-radius: 15px;
+    color: black;
+    font-weight: 700;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.upgrade-vip:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#play-music {
+    background-color:#120c1c;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    bottom:0;
+    display: flex;
+    color: var(--text-color);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.name-music__img img {
+    width: 60px;
+    border-radius: 5px;
+}
+
+.play-music__name {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.container-name-music__sub {
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+.container-name-music__name-music--sub {
+    color: var(--Subtitles-color);
+}
+
+.container-name-music__icon {
+    margin-left: 30px;
+}
+
+.container-name-music__icon-ellipsis {
+    padding: 0 20px;
+}
+
+.play-music__adjusted-icon {
+    text-align: center;
+}
+
+.play-music__adjusted-icon i {
+    padding: 0 16px;
+    font-size: 20px;
+}
+
+.play-music__adjusted-percent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--Subtitles-color);
+    align-items: center;
+}
+
+.play-music__adjusted--sound--bar {
+    padding: 2px 0;
+    margin: 0 10px;
+    width: 506px;
+    background-color: #fff;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.play-music__tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-music__tools-list {
+    margin: 0 18px;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: rgba(226, 226, 226, 0.11);
+}
+
+.play-music__tools-icon {
+    padding: 0 12px;
+}
+
+.play-music__tools-adjusted {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.play-music__tools-adjusted--sub {
+    width: 72px;
+    background-color: #fff;
+    height: 2px;
+    margin-right: 18px;
+    margin-left: 12px;
+}
+
+.play-music__tools-seperats {
+    border-right: 1px solid rgb(80, 80, 80);
+    height: 32px;
+}
+
+#top-music {
+    width: 20%;
+    height: 70px;
+    background-color: var(--topic-color);
+    border-left: 1px solid rgb(51, 51, 51);
+    color: var(--text-color);
+    height: var(--webpage-height);
+}
+
+.top-music__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    height: 68px;
+}
+
+.top-music__header--option {
+    height: 68px;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.top-music__header--option-sub {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 50px;
+    padding: 3px;
+}
+
+.option-playlists {
+    padding: 6px 14px;
+}
+
+.option-recently {
+    padding: 6px 14px;
+}
+
+.top-music__header--setting-timer {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 20px;
+}
+
+.top-music__header--setting-different {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 20px;
+}
+
+.topic-body {
+    width: 88%;
+    margin: 0 auto;
+    height: 598px;
+    overflow-y: scroll;
+}
+
+.topic-body::-webkit-scrollbar {
+    width: 0;
+    background-color: var(--topic-color);
+    border-radius: 3px;
+} 
+
+.topic-body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.275);
+    border-radius: 3px;
+}
+
+/* topic cá nhân */
+.topic-content__individual {
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+.topic-content__individual-img {
+    width: 94px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.topic-content__individual-name {
+    font-size: 35px;
+    color: var(--text-color);
+    margin-top: 12px;
+}
+
+.topic-content__individual-option {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;    
+    background-color: rgba(255, 255, 255, 0.123);
+    width: 500px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: var(--text-color);
+    margin: 65px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.topic-content__individual-option__li {
+    padding: 5px 25px;
+}
+
+.topic-content__individual-option__li-icon {
+    padding: 5px 25px;
+}
+
+.topic-content__individual-option__li-icon--sub {
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    width: 200px;
+    background-color: #432275;
+    border-radius: 5px;
+    display: none;
+}
+
+.topic-content__individual-option__li-icon--sub p {
+    padding: 8px 12px;
+    line-height: 1.62;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.topic-content__individual-option__li-icon--sub p:hover {
+    background-color:#ffffff1a
+}
+
+.topic-content__individual-upgrade {
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.topic-content__individual-upgrade--vip {
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.123);
+    color: var(--text-color);
+    margin-left: 12px;
+}
+
+.topic-content__individual-upgrade--vip:hover, 
+.topic-content__individual-upgrade--vip1:hover,
+.topic-content__individual-upgrade--icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.topic-content__individual-upgrade--vip1 {
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: #f8e71c;
+    border-radius: 20px;
+    margin-left: 12px;
+}
+
+.topic-content__individual-upgrade--icon {
+    border-radius: 20px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.123);
+    margin-left: 12px;
+    color: var(--text-color);
+}
+
+/*các mục con của cá nhân được ẩn đi */
+.individual-child {
+    width: 912px;
+    display: block;
+    margin: 0 auto;
+}
+    /* tổng quan */
+.individual-child--overview {
+    padding: 30px 0;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+    /* bài hát */
+.individual-child--music {
+    color: var(--text-color);
+    display: none;
+}
+
+.individual-child--music__text {
+    font-size: 18px;
+    margin-bottom: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.individual-child--music__container {
+    padding: 30px 0;
+    min-height: 220px;
+    background-color:rgba(255, 255, 255, 0.123);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.individual-child--music__container i {
+    font-size: 70px;
+    padding-bottom: 20px;
+}
+
+.individual-child--music__container p {
+    color: var(--Subtitles-color);
+    font-size: 18px;
+}
+
+    /* playlisst */
+.individual-child--playlist {
+    color: var(--text-color);
+    display: none;
+}
+
+.individual-child--playlist__text {
+    font-size: 20px;
+    margin-bottom: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.individual-child--playlist__new {
+    background: linear-gradient(33deg,#5a1eae -7%,#ce267a 117%);
+    width: 162px;
+    height: 208px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.individual-child--playlist__new i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.individual-child--playlist__new-text {
+    font-size: 18px;
+}
+
+/* nghệ sĩ */
+.individual-child__artist {
+    display: none;
+}
+
+.individual-child__artist-icon {
+    color: var(--Subtitles-color);
+}
+
+/* OA */
+.individual-child__oa {
+    display: none;
+}
+
+/* album */
+.individual-child__album {
+    display: none;
+}
+
+/* MV */
+.individual-child__mv {
+    display: none;
+}
+
+/* Tải lên */
+.individual-child__up {
+    display: none;
+}
+
+/*  */
+.dlblock {
+    display: block;
+}
+
+.top-music__body {
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.option-playlists__child {
+    width: 100%;
+}
+
+.option-playlists__child-text-next {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.playlists__child-next--text {
+    font-size: 14px;
+    height: 16px;
+    color: var(--Subtitles-color);
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.playlists__child-next--link {
+    margin-left: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    height: 16px;
+    color: var(--buttom-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+/* bài hát */
+.playing {
+    background-color: var(--buttom-color);
+}
+
+.option-playlists__child-next {
+    border-radius:3px;
+    position: relative;
+}
+
+.playlists__child-next--item {
+    padding: 8px;
+}
+
+.option-playlists__child-next:hover .playlists__child-next--item-icon{
+    display: block;
+}
+
+.playlists__child-next--item {
+    display: flex;
+    align-items: center;
+}
+
+.playlists__child-next--item1 {
+    display: flex;
+    padding: 8px;
+}
+ 
+/* .playlists__child-next--item:hover, 
+.playlists__child-next--item1:hover {
+    background-color:rgba(255, 255, 255, 0.123);
+} */
+
+.playlists__child-next--item-img, .playlists__child-next--item1-img {
+    width: 42px;
+    border-radius:3px;
+    margin-right: 8px;
+}
+
+.playlists__child-next--item-icon, .playlists__child-next--item1-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    display: none;
+}
+
+.playlists__child-next--item__music-name, .playlists__child-next--item1__music-name {
+    height: 16px;
+    overflow: hidden;
+    font-size: 13px;
+    margin-bottom: 2px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.playlists__child-next--item__name-singer, .playlists__child-next--item1__name-singer {
+    font-size: 12px;
+    color: var(--Subtitles-color);
+    text-decoration: none;
+}
+
+.playlists__child-next--item__name-singer:hover {
+    text-decoration: revert;
+    color: var(--buttom-color);
+}
+
+/* mục khám phá*/
+.discover {
+    width: 100%;
+}
+.discover-animation {
+    position: relative;
+    width: 100%;
+    height: 168px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .25s linear;
+}
+
+.discover-animation__img {
+    width: 272px;
+    height: 168px;
+    border-radius:8px;
+    margin: 0 15px;
+}
+
+/* hover nổi lên 2 nút click */
+.discover-animation:hover .directional {
+    display: flex;
+}
+
+
+.directional {
+    position: absolute;
+    top: 30%;
+    width: 92%;
+    margin-left: 30px;
+    /* display: none; */
+    justify-content: space-between;
+}
+
+.directional-icon-left {
+    /* position: absolute; */
+    left: 18px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.288);
+    border-radius: 26px;
+    color: #fff;
+}
+
+.directional-icon-right {
+    /* position: absolute; */
+    /* top: 30%; */
+    right: 30px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.288);
+    border-radius: 26px;
+    color: #fff;
+}
+
+/* mục cá nhân - gần đây */
+.discover-recently__text {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.discover-recently__text-h3 {
+    color: #fff;
+    float: left;
+}
+
+.discover-recently__text-p:hover {
+    color: var(--buttom-color);
+}
+
+.discover-recently__text-p {
+    color: var(--text-secondary);
+    float: right;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.discover-recently__text-subp {
+    margin-left: 8px;
+}
+
+.discover-recently__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discover-recently-item {
+    width: 110px;
+}
+
+.discover-recently__list-img {
+    width: 110px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.discover-recently__list-text:hover {
+    color: var(--link-text-hover) ;
+}
+
+.discover-recently__list-text {
+    text-decoration: none;
+    color: #fff;
+    height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+}
+
+/* mục các nhân - lựa chọn hôm nay */
+.list-5-item {
+    display: grid;
+}
+.text-h3 {
+    color: #fff;
+    float: left;
+    display: block;
+    margin: 44px 0 22px 0;
+}
+
+.list-5-item__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.list-5-item__item {
+    width: 160px;
+}
+
+.list-5-item__item-img {
+    width: 160px;
+    border-radius: 5px;
+}
+
+.list-5-item__item-a:hover {
+    color: var(--link-text-hover);
+}
+
+.list-5-item__item-a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.list-5-item__item-text {
+    color: var(--Subtitles-color);
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+}
+
+/* mục các nhân - Radio nổi bật */
+.discover-radio-hot {
+    display: grid;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.discover-radio-hot__list {
+    list-style-type: none;
+    display: flex;
+    height: 170px;
+}
+
+.discover-radio-hot__list-item:first-child {
+    margin-left: 0;
+}
+
+.discover-radio-hot__list-item:last-child {
+    margin-right: 0;
+}
+
+.discover-radio-hot__list-item {
+    width: 106px;
+    margin: 0 14px;
+}
+
+.discover-radio-hot__item-img {
+    position: relative;
+}
+
+.discover-radio-hot__item-imgdad {
+    width: 106px;
+    border-radius:50%;
+}
+
+.discover-radio-hot__item-imgchild {
+    position: absolute;
+    width: 36px;
+    right: 0px;
+    border: 2px solid #000;
+    border-radius:50%;
+    z-index: 1;
+    bottom: 4px;
+}
+
+.discover-radio-hot__h3, .discover-radio-hot__span {
+    text-align: center;
+}
+
+.discover-radio-hot__live {
+    position: absolute;
+    padding: 1px 4px;
+    font-size: 8px;
+    background-color: #ff0a0a;
+    border-radius:2px;
+    color: #fff;
+    bottom: 0;
+    right: 40px;
+}
+
+/* khám phá - Mix Riêng Cho Bạn */
+.mix-user {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.mix-user__h3 {
+    margin: 22px 0;
+}
+
+.mix-user__ul {
+    list-style: none;
+    display: flex;
+}
+
+.mix-user__li {
+    width: 162px;
+    margin: 0 12px;
+}
+
+.mix-user__img {
+    width: 162px;
+    border-radius: 5px;
+}
+
+.mix-user__singer a:hover {
+    color: var(--link-text-hover);
+}
+
+.mix-user__singer, .mix-user__singer a {
+    text-decoration: none;
+    color: var(--Subtitles-color);
+}
+
+.mix-user__singer {
+    margin: 10px 0;
+}
+
+/* khám phá - vì bạn đã nghe */
+.discover-heard {
+    list-style: none;
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+}
+
+.discover-heard__singer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.discover-heard__singer-img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.discover-heard__singer-text {
+    margin-left: 10px;
+}
+
+.discover-heard__singer-text__heard {
+    color: var(--Subtitles-color);
+    font-size: 14px;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+.discover-heard__singer-text__singer {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.discover-heard__item {
+    display: inline-block;
+    width: 160px;
+    margin: 0 14px;
+}
+
+.discover-heard__item:first-child {
+    margin-left: 0;
+}
+
+.discover-heard__item:last-child {
+    margin-right: 0;
+}
+
+.discover-heard__item-link {
+    padding-bottom: 10px;
+    height: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.discover-heard__item-singer-p {
+    color: var(--Subtitles-color);
+}
+
+.discover-heard__item-singer:hover {
+    color: var(--link-text-hover);
+    text-decoration: revert;
+}
+
+.discover-heard__item-singer {
+    font-size: 14px;
+    color: var(--Subtitles-color);
+    text-decoration: none;
+}
+
+/* khám phá - zingchart */
+.discover-zingchart {
+    height: 416px;
+    border-radius:5px;
+    position: relative;
+}
+
+.discover-zingchart__background {
+    background-image: var(--linear-gradient-bg);
+    /* background-color: linear-gradient(180deg,#740091,#2d1a4c);; */
+    border-radius:5px;
+    height: 416px;
+}
+
+.discover-zingchart__img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0.1;
+    border-radius:5px;
+    height: 416px;
+    background: url('../img/nen-zingchart.jpg') top/cover no-repeat;
+}
+
+.discover-zingchart__title {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+}
+
+.discover-zingchart__title-iconplay {
+    background-color: #fff;
+    color: var(--buttom-color);
+    font-weight: 900;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 4px;
+    align-items: center;
+}
+
+.discover-zingchart__item {
+    /* margin-left: 100px;
+    font-size: 50px;
+    z-index: 100;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    font-weight: 900;
+    /* color: rgba(74,144,226,0);
+    color: #4a90e2;
+    background-color:#fff; */
+}
+
+.discover-zingchart__item-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: rgba(74,144,226,0);
+    opacity: 1;
+}
+
+.zingchart__is-top1 {
+    -webkit-text-stroke: 1px #4a90e2;
+}
+
+.zingchart__is-top2 {
+    -webkit-text-stroke: 1px #50e3c2;
+}
+
+.zingchart__is-top3 {
+    -webkit-text-stroke: 1px #e35050;
+}
+
+
+.discover-zingchart__list {
+    list-style-type: none;
+    position: absolute;
+    top: 76px;
+    left: 16px;
+}
+
+.discover-zingchart__item {
+    display: flex;
+    align-items: center;
+    width: 274px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.082);
+    border-radius: 5px;
+}
+
+.discover-zingchart__item-img {
+    margin: 0 10px;
+    width: 60px;
+    border-radius:5px;
+}
+
+.discover-zingchart__item-mysong {
+
+}
+
+.discover-zingchart__item-namemysong {
+    width: 76px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 1;
+}
+
+.discover-zingchart__item-singer {
+    font-size: 12px;
+    height: 16px;
+    overflow: hidden;
+    width: 106px;
+}
+
+.discover-zingchart__item-link-singer:hover {
+    color: var(--link-text-hover);
+    text-decoration: revert;
+}
+
+.discover-zingchart__item-link-singer {
+    text-decoration: none;
+    color: var(--Subtitles-color);
+    width: 84px;
+}
+
+.discover-zingchart__item-percent {
+    font-size: 16px;
+    font-weight:600;
+    color: #fff;
+}
+
+.discover-zingchart__button {
+    font-size: 14px;
+    position: absolute;
+    bottom: 24px;
+    left: 110px;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 30px;
+    border:1px solid #fff;
+}
+
+.chart-mysong {
+    position: absolute;
+    top: 76px;
+    right: 0;
+    width: 600px;
+}
+
+
+.zingchart-week {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+
+}
+
+.zingchart-week__vn-img, 
+.zingchart-week__usuk-img, 
+.zingchart-week__kpop-img {
+    width: 286px;
+    border-radius: 5px;
+}
+
+/* khám phá - dánh sách ca sĩ */
+.this-singer__list {
+    list-style-type: none;
+    display: flex;
+    overflow: hidden;
+    margin: 26px 0;
+}
+
+.this-singer__list-item {
+    padding: 0 14px;
+}
+
+.this-singer__list-item-img {
+    width: 104px;
+}
+
+/* khám phá - top 100 */
+.discover-top100__link {
+    width: 104px;
+    line-height: 24px;
+    height: 28px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+
+/* khám phá - sự kiện */
+.discover-events {
+    display: grid;
+}
+
+.discover-events__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.discover-events__list-item {
+    margin: 0 14px;
+    position: relative;
+}
+
+.discover-events__list-item:first-child {
+    margin-left: 0;
+}
+.discover-events__list-item:last-child {
+    margin-right: 0;
+}
+
+.events__list-item-header {
+    position: relative;
+}
+
+.events__list-item-events {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+.events__list-item-header-img {
+    width: 286px;
+    border-radius: 5px;
+}
+
+.list-happy {
+    list-style-type: none;
+}
+
+.item-events-text__events {
+    padding: 2px;
+    background-color: #fff;
+    color:red;
+    font-size: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.item-events-text {
+    color: #fff;
+}
+
+.item-events-text__work {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: 300;
+}
+
+.events__list-item-header-img-sub {
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 97.5%;
+    background-image: linear-gradient(182deg,transparent 27%,rgba(0,0,0,.78));
+}
+
+.events__list-item-body {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item-body-happy-text {
+    color: #fff;
+    font-size: 14px;
+}
+
+.list-happy {
+    display: flex;
+    margin: 6px 0;
+}
+
+.list-happy-pictureframe {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+.list-happy-pictureframe-img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--buttom-color);
+}
+
+.list-happy-pictureframe-text {
+    color: var(--Subtitles-color);
+    font-size: 14px;
+}
+.events__list-item-body-buttom {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: var(--buttom-color);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Khám Phá - Mixtape Yêu Thích */
+.discover-mixtape {
+    display: grid;
+    margin-bottom: 40px;
+}
+
+.discover-mixtape__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discover-mixtape__list-item {
+    width: 162px;
+}
+
+.discover-mixtape__list-item-img {
+    width: 162px;
+    border-radius: 5px;
+}
+
+.discover-mixtape__list-item-linksinger {
+    color: var(--Subtitles-color);
+}
+
+/* khám phá- mới phát hành */
+.discover-heard {
+    display: grid;
+}
+
+.new-release-list {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.new-release-list_item {
+    background-color: var(--box-item-bg);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
+    box-shadow: 0px 0px 8px rgb(37, 37, 37);
+    margin: 0 14px;
+    margin-bottom: 30px;
+}
+.new-release-list_item:first-child {
+    margin-left: 0;
+}
+.new-release-list_item:last-child {
+    margin-right: 0;
+}
+
+.new-release-list_item-img {
+    width: 122px;
+    border-radius: 5px;
+}
+
+.new-release-list_item-content {
+    width: 130px;
+    margin-left: 10px;
+}
+
+.new-release__content-songinfo {
+    margin-bottom: 32px;
+
+}
+
+.new-release__content-mysong {
+    color: #fff;
+    height: 36px;
+    overflow: hidden;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.new-release__content-singer {
+    font-size: 12px;
+}
+
+.new-release__content-singer_link {
+    color: var(--Subtitles-color);
+    height: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.new-release__content-ratings_number {
+    -webkit-text-stroke: 1px var(--Subtitles-color);
+    color: rgba(74, 144, 226, 0);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+.new-release__content-ratings_numbersub {
+    color: var(--Subtitles-color);
+    font-size: 14px;
+}
+
+.discover-heard_list {
+
+}
+
+.discover-heard__list-item__item {
+    margin: 0 14px;
+}
+.discover-heard__list-item__item:first-child {
+    margin-left: 0;
+}
+.discover-heard__list-item__item:last-child {
+    margin-right: 0;
+}
+
+/* 
+Khám phá - nghệ sĩ yêu thích
+*/
+.discover-favorite-artist__singer {
+    position: relative;
+}
+
+.discover-favorite-artist__singer-img {
+    width: 250px;
+    z-index: 1;
+}
+
+.discover-favorite-artist__singer-love-list {
+    position: absolute;
+}
+
+.discover-favorite-artist__singer-love-list-img {
+    z-index: 2;
+}

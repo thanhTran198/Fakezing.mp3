@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../icon/themify-icons/themify-icons.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="category">
+        <div class="category-logo">
+            <img class="category-logo__img" src="../img/logo-mp3.svg" alt="logo-zing.mp3">
+        </div>
+        <ul class="category-individual">
+            <li class="hover category__napbar-item category-user ">
+                <i class="mp-icon fas fa-sliders-h"></i>
+                Cá Nhân
+            </li>
+            <li class="hover category__napbar-item category-discover category__active">
+                <i class="mp-icon far fa-dot-circle"></i>
+                Khám Phá
+            </li>
+            <li class="hover category__napbar-item category-zingchart">
+                <i class="mp-icon fab fa-stumbleupon-circle"></i>
+                #zingchart
+            </li>
+            <li class="hover category__napbar-item category-live category-radio">
+                <i class="mp-icon far fa-play-circle category-radio"></i>
+                Radio
+                <p class="category-live-active">live</p>
+            </li>
+            <li class="hover category__napbar-item category-folow">
+                <i class="mp-icon fas fa-th-large"></i>
+                Theo Dõi
+            </li>
+        </ul>
+        <div class="seperate"></div>
+        <div class="slide-genre">
+            <ul class="category-new-music">
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon fas fa-music"></i>
+                    Nhạc Mới
+                </li>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon fas fa-icons"></i>
+                    Thể Loại
+    
+                </li>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon far fa-star"></i>
+                    Top 100
+    
+                </li>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon far fa-play-circle"></i>
+                    MV
+    
+                </li>
+                <div class="upgrade">
+                    <p class="upgrade-text">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
+                    <p class="upgrade-vip">NÂNG CẤP VIP</p> 
+                </div>
+            </ul>
+            <ul class="library">
+                <h3 class="library-text category__napbar-item">THƯ VIỆN</h3>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon fas fa-music"></i>
+                    Bài hát
+                </li>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon fas fa-list-ol"></i>
+                    Playlist
+                </li>
+                <li class="hover category__napbar-item">
+                    <i class="mp-icon fas fa-clock"></i>
+                    Gần đây
+                </li>
+            </ul>
+            <div class="new-playlist">
+                <i class="ti-plus"></i>
+                <p class="hover new-playlist__text">Tạo playlist mới</p>
+            </div>
+        </div>
+    </div>
+    <div id="topic">
+        <div class="topic-header">
+            <div class="topic-header__icon">
+                <i class="ti-arrow-left"></i>
+                <i class="ti-arrow-right"></i>
+            </div>
+            <form class="search">
+                <i class="search-icon ti-search"></i>
+                <input class="search-input" type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV...">
+            </form>
+            <div class="level">
+                <i class="level-icon fas fa-tshirt" title="chủ đề"></i>
+                <i class="level-icon ti-upload" title="Tải lên"></i>
+                <i class="level-icon level-icon__right ti-settings" title="Cài đặt"></i>
+                <img src="../img/avatar.jpg" class="level-member">
+            </div>
+        </div>
+
+        <div class="topic-body">
+            <!-- mục cá nhân -->
+            <div class="sub-categery__item topic-content__individual">
+                <img class="topic-content__individual-img" src="../img/avatar.jpg" alt="Trần Hữu Thành">
+                <h2 class="topic-content__individual-name">Trần Hữu Thành</h2>
+                <ul class="topic-content__individual-option">
+                    <li class="hover topic-content__individual-option__li active">TỔNG QUAN</li>
+                    <li class="hover topic-content__individual-option__li">BÀI HÁT</li>
+                    <li class="hover topic-content__individual-option__li">PLAYLIST</li>
+                    <li class="hover topic-content__individual-option__li" id="change-name">NGHỆ SĨ</li>
+                    <li class="hover topic-content__individual-option__li-icon" onclick="topicIndividual()">
+                        <i class="ti-more-alt"></i>
+                    </li>
+                    <div class="topic-content__individual-option__li-icon--sub">
+                        <p class="change-item oa" onclick="chanName()">OA</p>
+                        <p class="change-item album" onclick="chanName()">ALBUM</p>
+                        <p class="change-item mv" onclick="chanName()">MV</p>
+                        <p class="change-item up" onclick="chanName()">TẢI LÊN</p>
+                    </div>
+                </ul>
+                <div class="topic-content__individual-upgrade">
+                    <div class="topic-content__individual-upgrade--vip1">NÂNG CẤP VIP</div>
+                    <div class="topic-content__individual-upgrade--vip">NHẬP CODE VIP</div>
+                    <I class="topic-content__individual-upgrade--icon ti-more-alt"></I>
+                </div>
+                <!-- các mục con của cá nhân được ẩn đi -->
+                <div class="individual-child">
+
+                    <!-- mục tổng quan -->
+                    <div class="individual-child--overview individual-child__sub ">
+                        <i></i>
+                        <p></p>
+                    </div>
+
+                    <!--mục bài hát -->
+                    <div class="individual-child--music individual-child__sub dlblock">
+                        <p class="individual-child--music__text">Bài Hát</p>
+                        <div class="individual-child--music__container">
+                            <i class="ti-music-alt"></i>
+                            <p>Không có Bài hát trong thư viện nhạc cá nhân</p>
+                        </div>
+                    </div>
+                    <!-- mục playlist -->
+                    <div class="individual-child--playlist individual-child__sub">
+                        <p class="individual-child--playlist__text">Playlist</p>
+                        <div class="individual-child--playlist__new">
+                            <i class="ti-plus"></i>
+                            <p class="individual-child--playlist__new-text">Tạp playlist mới</p>
+                        </div>
+                    </div>
+                    <!-- mục nghệ sĩ -->
+                    <div class=" individual-child--music__container individual-child__artist individual-child__sub">
+                        <i class="individual-child__artist-icon ti-microphone"></i>
+                        <p class="individual-child__artist-text">Không có nghệ sĩ nào trong thư viện nhạc cá nhân</p>
+                    </div>
+                    <!-- mục OA -->
+                    <div class="individual-child--music__container individual-child__oa individual-child__sub">
+                        <i class=""></i>
+                        <p classs=""></p>
+                    </div>
+                    <!-- mục ALBUM -->
+                    <div class="individual-child__album individual-child__sub">
+                        <i class=""></i>
+                        <p classs=""></p>
+                    </div>
+                    <!-- mục MV -->
+                    <div class="individual-child__mv individual-child__sub">
+                        <i class=""></i>
+                        <p classs=""></p>
+                    </div>
+                    <!-- mục tải lên -->
+                    <duv class="individual-child__up individual-child__sub">
+                        <i class=""></i>
+                        <p classs=""></p>
+                    </duv>
+                </div>
+            </div>
+
+            <!-- mục khám phá -->
+            <div class="discover">
+                <div class="discover-animation">
+                    <img class="discover-animation__img img-discover_1" src="../img/discover-img/1.jpg" alt="ảnh em ơi đừng sầu">
+                    <img class="discover-animation__img img-discover_2" src="../img/discover-img/2.jpg" alt="ảnh hôm nay nghe gì">
+                    <img class="discover-animation__img img-discover_3" src="../img/discover-img/3.jpg" alt="ảnh yêu phải tính">
+                    <img class="discover-animation__img img-discover_4" src="../img/discover-img/4.jpg" alt="ảnh em khác gì hoa">
+                    <img class="discover-animation__img img-discover_5" src="../img/discover-img/5.jpg" alt="ảnh em khác gì hoa">
+                    
+                    <div class="discover-none">
+                        <div class="directional">
+                            <i class="directional-icon-left ti-angle-left"></i>
+                            <i class="directional-icon-right ti-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="discover-qc">
+                    <img src="" alt="">
+                </div>
+
+                <div class="discover-recently">
+                    <div class="discover-recently__text">
+                        <h3 class="discover-recently__text-h3">Gần Đây</h3>
+                        <p class="discover-recently__text-p">
+                            TẤT CẢ
+                            <i class="discover-recently__text-subp ti-angle-right"></i>
+                        </p>
+                    </div>
+                    <ul class="discover-recently__list">
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/100-nhac-tre.webp" alt="">
+                            <a href="#" class="discover-recently__list-text" title="Top 100 Bài Hát Nhạc Trẻ Hay Nhất">Top 100 Bài Hát Nhạc Trẻ Hay Nhất</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/zing-chart.jpg" alt="">
+                            <a href="#" class="discover-recently__list-text" title="#zingchart">#zingchart</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/nhac-Baroque-tap-trung.webp" alt="">
+                            <a href="#" class="discover-recently__list-text" title="Nhạc Baroque Giúp Tập Trung Học Tập">Nhạc Baroque Giúp Tập Trung Học Tập</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/zingchart-New-Release.jpg" alt="">
+                            <a href="#" class="discover-recently__list-text" title="#zingchart New Release">#zingchart New Release</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/Chillhop-Radio.webp" alt="">
+                            <a href="#" class="discover-recently__list-text" title="Chillhop Radio">Chillhop Radio</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/Pocus-Ambient.webp" alt="">
+                            <a href="#" class="discover-recently__list-text">Pocus Ambient</a>
+                        </li>
+                        <li class="discover-recently-item">
+                            <img class="discover-recently__list-img" src="../img/discover-recently/100-nhac-tre.webp" alt="">
+                            <a href="#" class="discover-recently__list-text" title="Top 100 Nhạc V-Pop Hay Nhất">Top 100 Nhạc V-Pop Hay Nhất</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-5-item">
+                    <h3 class="text-h3">Lựa Chọn Hôm Nay</h3>
+                    <ul class="list-5-item__list">
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/todaychoice/V-Pop-Rising.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">V-Pop Rising</a>
+                            <p class="list-5-item__item-text" title="Khám phá những tài năng Gen Z của...">Khám phá những tài năng Gen Z của...</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/todaychoice/Love-Pop.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">Love Pop</a>
+                            <p class="list-5-item__item-text" title="Không ai là không cần một bài ca tình yêu">Không ai là không cần một bài ca tình yêu</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/todaychoice/Rap-Việt-Hết-Hợp.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">Rap Việt Hết Hợp</a>
+                            <p class="list-5-item__item-text" title="Pha hội ngộ cực bén của Ráp Việt">Pha hội ngộ cực bén của Ráp Việt</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/todaychoice/Đỉnh-cao-Pop.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">Đỉnh cao Pop</a>
+                            <p class="list-5-item__item-text" title="Ở đây có những ca khúc... Top Of The POP">Ở đây có những ca khúc... Top Of The POP</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/todaychoice/K-Pop-Newbie.jpg" alt="#">
+                            <a class="list-5-item__item-a" href="">K-Pop Newbie</a>
+                            <p class="list-5-item__item-text" title="BILLLIE và những tân binh khủng của...">BILLLIE và những tân binh khủng của...</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-5-item">
+                    <h3 class="text-h3">XONE's CORNER</h3>
+                    <ul class="list-5-item__list">
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/XONE's-CORNER/happy-songs.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">HAPPY SONGS</a>
+                            <p class="list-5-item__item-text" title="Top 'bài hát hạnh phúc' được nghe nhiều nhất">Top "bài hát hạnh phúc" được nghe nhiều nhất</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/XONE's-CORNER/KEY-TAE-YEON.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">KEY x TAE YEON</a>
+                            <p class="list-5-item__item-text" title="Bộ đôi tài năng phá đảo K-POP">Bộ đôi tài năng phá đảo K-POP</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/XONE's-CORNER/Asia-Tune-SOFT-POP.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">Asia Tune - SOFT POP</a>
+                            <p class="list-5-item__item-text" title="JoungJae, Mỹ Anh, Bol4...">JoungJae, Mỹ Anh, Bol4...</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/XONE's-CORNER/XONE'sPICKs-RnB.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">XONE's PICKs - RnB</a>
+                            <p class="list-5-item__item-text" title="Mood CHILL với nhạc RnB mê hoặc">Mood CHILL với nhạc RnB mê hoặc</p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/XONE's-CORNER/INDIE-HIT.jpg" alt="#">
+                            <a class="list-5-item__item-a" href="">INDIE HITs</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">Tuyển chọn mới mỗi ngày bởi XONE</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="discover-radio-hot">
+                    <h3 class="text-h3">Radio Nổi Bật</h3>
+                    <ul class="discover-radio-hot__list">
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/xone-radio.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-xone-radio.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">XONE Radio</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">428 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/on-air.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-on-air.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">On Air</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">64 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/cham.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-cham.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">Chạm</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">308 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/cham.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-cham.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">V-POP</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">698 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/bolero.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-bolero.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">Bolero</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">230 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/US-UK.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-US-UK.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">US-UK</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">159 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/K-POP.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-K-POP.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">K-POP</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">41 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/acoutic.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/sub-acoutic.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">Acoustic</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">83 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/Rap-viet.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/Rap-viet.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">Rap Việt</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">53 đang nghe</span>
+                        </li>
+                        <li class="discover-radio-hot__list-item">
+                            <div class="discover-radio-hot__item-img">
+                                <img class="discover-radio-hot__item-imgdad" src="../img/radio-noi-bat/the-on-radio.webp" alt="#">
+                                <img class="discover-radio-hot__item-imgchild" src="../img/radio-noi-bat/the-on-radio.webp" alt="#">
+                                <span class="discover-radio-hot__live">LIVE</span>
+                            </div>
+                            <h3 class="list-5-item__item-a discover-radio-hot__h3">The One Radio</h3>
+                            <span class="list-5-item__item-text discover-radio-hot__span">44 đang nghe</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mix-user">
+                    <h3 class="text-h3 mix-user__h3">Mix Riêng Cho Bạn</h3>
+                    <ul class="mix-user__ul">
+                        <li class="mix-user__li">
+                            <img src="../img/mix-rieng-cho-ban/mix1.jpg" alt="" class="mix-user__img">
+                            <p class="mix-user__singer">
+                                <a href="">Nhật Phong</a>,
+                                <a href="">Đức Phúc</a>,
+                                <a href="">Hứa Kim Tuyền</a>...
+                            </p>
+                        </li>
+                        <li class="mix-user__li">
+                            <img src="../img/mix-rieng-cho-ban/mix2.jpg" alt="" class="mix-user__img">
+                            <p class="mix-user__singer">
+                                <a href="">Kay Trần</a>,
+                                <a href="">Khoa</a>,
+                                <a href="">Kass</a>...
+                            </p>
+                        </li>
+                        <li class="mix-user__li">
+                            <img src="../img/mix-rieng-cho-ban/mix3.jpg" alt="" class="mix-user__img">
+                            <p class="mix-user__singer">
+                                <a href="">Đạt G</a>,
+                                <a href="">Châu Khải Phong</a>,
+                                <a href="">Trịnh Đình</a>...
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="discover-heard">
+                    <div class="discover-heard__singer">
+                        <img src="../img/vi-ban-da-nghe/karik.webp" alt="" class="discover-heard__singer-img">
+                        <div class="discover-heard__singer-text">
+                            <span class="discover-heard__singer-text__heard">VÌ BẠN ĐÃ NGHE</span> <br>
+                            <span class="discover-heard__singer-text__singer">Karik</span>
+                        </div>
+                    </div>
+                    <ul class="discover-heard__list">
+                        <li class="discover-heard__item">
+                            <img class="list-5-item__item-img" src="../img/vi-ban-da-nghe/bai-hat-hay-nhat-karik.webp" alt="#">
+                            <a class="list-5-item__item-a discover-heard__item-link" href="" title="Những Bài Hát Hay Nhất Của Karik">Những Bài Hát Hay Nhất Của Karik</a>
+                            <p class="discover-heard__item-singer-p">
+                                <a  class="discover-heard__item-singer" href="">Karik</a>
+                            </p>
+                        </li>
+                        <li class="discover-heard__item">
+                            <img class="list-5-item__item-img" src="../img/vi-ban-da-nghe/do-what-your-one.webp" alt="#">
+                            <a class="list-5-item__item-a discover-heard__item-link" href="" title="Do What You Want (Remixes)">Do What You Want (Remixes)</a>
+                            <p class="discover-heard__item-singer-p">
+                                <a  class="discover-heard__item-singer" href="">Châu Đăng Khoa</a>,
+                                <a  class="discover-heard__item-singer" href="">Karik</a>
+                            </p>
+                        </li>
+                        <li class="discover-heard__item">
+                            <img class="list-5-item__item-img" src="../img/vi-ban-da-nghe/your-life.webp" alt="#">
+                            <a class="list-5-item__item-a discover-heard__item-link" href="">Enoy Your Life</a>
+                            <p class="discover-heard__item-singer-p">
+                                <a  class="discover-heard__item-singer" href="#">Karik</a>
+                            </p>
+                        </li>
+                        <li class="discover-heard__item">
+                            <img class="list-5-item__item-img" src="../img/vi-ban-da-nghe/mixtape.webp" alt="#">
+                            <a class="list-5-item__item-a discover-heard__item-link" href="">Mixtape Back2black</a>
+                            <p class="discover-heard__item-singer-p">
+                                <a class="discover-heard__item-singer" href="#">Karik</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-5-item">
+                    <h3 class="text-h3">Nhạc Mới Mỗi Ngày</h3>
+                    <ul class="list-5-item__list">
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/nhac-moi-moi-ngay/V-Pop-thang3.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">V-Pop Tháng 3/2022</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Hoàn Thùy Linh</a>,
+                                <a href="" class="discover-heard__item-singer">ERIK</a>,
+                                <a href="" class="discover-heard__item-singer">Mr.Siro</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/nhac-moi-moi-ngay/US-UK-thang3.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">US-UK Tháng 3/2022</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Troye Sivan</a>,
+                                <a href="" class="discover-heard__item-singer">Doja Cat</a>,
+                                <a href="" class="discover-heard__item-singer">salem ilese</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/nhac-moi-moi-ngay/K-Pop-thang3.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">K-Pop Tháng 3/2022</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">TREASURE</a>,
+                                <a href="" class="discover-heard__item-singer">Super Junior</a>,
+                                <a href="" class="discover-heard__item-singer">Rocket Punch</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/nhac-moi-moi-ngay/C-Pop-thang3.webp" alt="#">
+                            <a class="list-5-item__item-a" href="">C-Pop Tháng 3/2022</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">YU</a>,
+                                <a href="" class="discover-heard__item-singer">Tiểu Điền Âm Nhạc Xã</a>,
+                                <a href="" class="discover-heard__item-singer">Tiểu Lam Bối Tâm</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/nhac-moi-moi-ngay/indie-viet-thang3.jpg" alt="#">
+                            <a class="list-5-item__item-a" href="" title="Indie Việt Tháng 3/2022">Indie Viet Tháng...</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Vũ Phụng Tiên</a>,
+                                <a href="" class="discover-heard__item-singer">Summer Vee</a>,
+                                <a href="" class="discover-heard__item-singer">Xuân Nghi</a>...
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="discover-zingchart">
+                    <div class="discover-zingchart__background"></div>
+                    <div class="discover-zingchart__img"></div>
+                    <h2 class="discover-zingchart__title">
+                        #zingchart
+                        <i class="discover-zingchart__title-iconplay ti-control-play"></i>
+                    </h2>
+                    <ul class="discover-zingchart__list">
+                        <li class="discover-zingchart__item">
+                            <span class="discover-zingchart__item-number zingchart__is-top1">1</span>
+                            <img src="../img/zingChart/top1.webp" alt="" class="discover-zingchart__item-img">
+                            <div class="discover-zingchart__item-mysong">
+                                <p class="discover-zingchart__item-namemysong">Chạy Về Nơi Phía Anh</p>
+                                <p class="discover-zingchart__item-singer">
+                                    <a href="" class="discover-zingchart__item-link-singer">Khắc Việt</a>
+                                </p>
+                            </div>
+                            <span class="discover-zingchart__item-percent">43%</span>
+                        </li>
+                        <li class="discover-zingchart__item">
+                            <span class="discover-zingchart__item-number zingchart__is-top2">2</span>
+                            <img src="../img/zingChart/top2.webp" alt="" class="discover-zingchart__item-img">
+                            <div class="discover-zingchart__item-mysong">
+                                <p class="discover-zingchart__item-namemysong">Chạy Về Khóc Với Anh</p>
+                                <p class="discover-zingchart__item-singer">
+                                    <a href="" class="discover-zingchart__item-link-singer">ERIK</a>
+                                </p>
+                            </div>
+                            <span class="discover-zingchart__item-percent">32%</span>
+                        </li>
+                        <li class="discover-zingchart__item">
+                            <span class="discover-zingchart__item-number zingchart__is-top3">3</span>
+                            <img src="../img/zingChart/top3.webp" alt="" class="discover-zingchart__item-img">
+                            <div class="discover-zingchart__item-mysong">
+                                <p class="discover-zingchart__item-namemysong">Không Trọn Vẹn Nữa</p>
+                                <p class="discover-zingchart__item-singer">
+                                    <a href="" class="discover-zingchart__item-link-singer">Châu Khải Phong</a>, 
+                                    <a href="" class="discover-zingchart__item-link-singer">ACV</a>
+                                </p>
+                            </div>
+                            <span class="discover-zingchart__item-percent">25%</span>
+                        </li>
+                    </ul>
+                    <div class="discover-zingchart__button">Xem thêm</div>
+                    <div class="chart-mysong">
+                        <canvas id="myisChart" style="display: block;width: 400px;height: 200px;"></canvas>
+                    </div>
+                </div>
+                <div class="zingchart-week">
+                    <div class="zingchart-week__vn">
+                        <img src="../img/zingchart-week/vn.jpg" alt="" class="zingchart-week__vn-img">
+                    </div>
+                    <div class="zingchart-usuk">
+                        <img src="../img/zingchart-week/us-uk.jpg" alt="" class="zingchart-week__usuk-img">
+                    </div>
+                    <div class="zingchart-week__kpop">
+                        <img src="../img/zingchart-week/k-pop.jpg" alt="" class="zingchart-week__kpop-img">
+                    </div>
+                </div>
+
+                <div class="this-singer">
+                    <ul class="this-singer__list">
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/karik.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/erik.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/mr-siro.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/onlyc.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/chi-dan.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/justatee.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/jack.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/duc-phuc.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/huong-ly.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/hoa-minzy.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                        <li class="this-singer__list-item">
+                            <img src="../img/singer/trinh-thanh-binh.png" alt="" class="this-singer__list-item-img">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-5-item discover-top100">
+                    <h3 class="text-h3">Top 100</h3>
+                    <ul class="list-5-item__list">
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/top100/V-POP.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc V-Pop Hay Nhất</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">ERIK</a>,
+                                <a href="" class="discover-heard__item-singer">Lê Bảo Bình</a>,
+                                <a href="" class="discover-heard__item-singer">Khắc Việt</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/top100/rap-viet.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc Rap VIệt Nam Hay Nhất</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Lil Wuyn</a>,
+                                <a href="" class="discover-heard__item-singer">Binz</a>,
+                                <a href="" class="discover-heard__item-singer">Rhymastic</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/top100/rap,hip-hop.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc Rap/Hip Hop Âu Mỹ Hay Nhất</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">The Weeknd</a>,
+                                <a href="" class="discover-heard__item-singer">Post Malone</a>,
+                                <a href="" class="discover-heard__item-singer">Lann Dior</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/top100/nhac-tre.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Bài Hát Nhạc Trẻ Hay Nhất</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">ERIK</a>,
+                                <a href="" class="discover-heard__item-singer">Khắc Việt</a>,
+                                <a href="" class="discover-heard__item-singer">Châu Khải Phong</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/top100/pop-au-my.jpg" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="" title="Indie Việt Tháng 3/2022">Top 100 Pop Âu Mỹ Hay Nhất</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Adele</a>,
+                                <a href="" class="discover-heard__item-singer">The Kid LAROI</a>,
+                                <a href="" class="discover-heard__item-singer">Justin Bieber</a>...
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- 
+                        Sự Kiện
+                     -->
+                <div class="discover-events">
+                    <h3 class="text-h3">Sự Kiện</h3>
+                    <ul class="discover-events__list">
+                        <li class="discover-events__list-item">
+                            <div class="events__list-item-header">
+                                <img src="../img/events/sk1.webp" alt="" class="events__list-item-header-img">
+                                <div class="events__list-item-header-img-sub"></div>
+                                <div class="events__list-item-events">
+                                    <span class="item-events-text__events">SỰ KIỆN</span>
+                                    <H4 class="item-events-text">Sinh Nhật Sao x MCK</H4>
+                                    <h5 class="item-events-text__work">ĐANG DIỄN RA</h5>
+                                </div>
+                            </div>
+                            <div class="events__list-item-body">
+                                <div class="list-item-body-happy">
+                                    <p class="list-item-body-happy-text">Lượt chúc mừng</p>
+                                    <ul class="list-happy">
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/1.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/2.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/3.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/4.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/5.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/6.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <span class="list-happy-pictureframe-text">+945</span>
+                                    </ul>
+                                </div>
+                                <div class="events__list-item-body-buttom">THAM GIA</div>
+                            </div>
+                        </li>
+                        <li class="discover-events__list-item">
+                            <div class="events__list-item-header">
+                                <img src="../img/events/sk2.webp" alt="" class="events__list-item-header-img">
+                                <div class="events__list-item-header-img-sub"></div>
+                                <div class="events__list-item-events">
+                                    <span class="item-events-text__events">PHÁT HÀNH BÀI HÁT</span>
+                                    <H4 class="item-events-text">Còn Chi Đâu Nữa Anh - Hà Thu</H4>
+                                    <h5 class="item-events-text__work">19:00 Thứ Năm, 03 tháng 3</h5>
+                                </div>
+                            </div>
+                            <div class="events__list-item-body">
+                                <div class="list-item-body-happy">
+                                    <p class="list-item-body-happy-text">Lượt quan tâm</p>
+                                    <ul class="list-happy">
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/7.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/8.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/9.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/10.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/11.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/12.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <span class="list-happy-pictureframe-text">+613</span>
+                                    </ul>
+                                </div>
+                                <div class="events__list-item-body-buttom">QUAN TÂM</div>
+                            </div>
+                        </li>
+                        <li class="discover-events__list-item">
+                            <div class="events__list-item-header">
+                                <img src="../img/events/sk3.webp" alt="" class="events__list-item-header-img">
+                                <div class="events__list-item-header-img-sub"></div>
+                                <div class="events__list-item-events">
+                                    <span class="item-events-text__events">TALKSHOW</span>
+                                    <H4 class="item-events-text">BUMBLEBEE: Dân Văn Phòng...</H4>
+                                    <h5 class="item-events-text__work">17:30 Thứ Năm. 03 Tháng 3</h5>
+                                </div>
+                            </div>
+                            <div class="events__list-item-body">
+                                <div class="list-item-body-happy">
+                                    <p class="list-item-body-happy-text">Lượt quan tâm</p>
+                                    <ul class="list-happy">
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/13.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/14.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/15.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/16.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/17.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <li class="list-happy-pictureframe">
+                                            <img src="../img/member/18.jpg" alt="" class="list-happy-pictureframe-img">
+                                        </li>
+                                        <span class="list-happy-pictureframe-text">+42</span>
+                                    </ul>
+                                </div>
+                                <div class="events__list-item-body-buttom">QUAN TÂM</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                    <!-- 
+                        Mixtape Yêu Thích
+                     -->
+                <div class="discover-mixtape">
+                    <h3 class="text-h3">Mixtape Yêu Thích</h3>
+                    <ul class="discover-mixtape__list">
+                        <li class="discover-mixtape__list-item">
+                            <img src="../img/Mixtape/1.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <div class="discover-mixtape__list-item-linksinger">
+                                <a href="" class="discover-heard__item-singer">LyLy</a>,
+                                <a href="" class="discover-heard__item-singer">Anh Tú</a>,
+                                <a href="" class="discover-heard__item-singer">XHTĐRLX</a>...
+                            </div>
+                        </li>
+                        <li class="discover-mixtape__list-item">
+                            <img src="../img/Mixtape/2.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <div class="discover-mixtape__list-item-linksinger">
+                                <a href="" class="discover-heard__item-singer">Châu Khải Phong</a>,
+                                <a href="" class="discover-heard__item-singer">Chu Bin</a>,
+                                <a href="" class="discover-heard__item-singer">Cao Nam Thành</a>...
+                            </div>
+                        </li>
+                        <li class="discover-mixtape__list-item">
+                            <img src="../img/Mixtape/3.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <div class="discover-mixtape__list-item-linksinger">
+                                <a href="" class="discover-heard__item-singer">Nhật Phong</a>,
+                                <a href="" class="discover-heard__item-singer">Đinh Tùng Huy</a>,
+                                <a href="" class="discover-heard__item-singer">Lê Bảo Bình</a>...
+                            </div>
+                        </li>
+                        <li class="discover-mixtape__list-item">
+                            <img src="../img/Mixtape/4.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <div class="discover-mixtape__list-item-linksinger">
+                                <a href="" class="discover-heard__item-singer">Noo Phước Thịnh</a>,
+                                <a href="" class="discover-heard__item-singer">Hiền Hồ</a>,
+                                <a href="" class="discover-heard__item-singer">Vương Anh Tú</a>...
+                            </div>
+                        </li>
+                        <li class="discover-mixtape__list-item">
+                            <img src="../img/Mixtape/5.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <div class="discover-mixtape__list-item-linksinger">
+                                <a href="" class="discover-heard__item-singer">Thiên Tú</a>,
+                                <a href="" class="discover-heard__item-singer">Lee ken</a>,
+                                <a href="" class="discover-heard__item-singer">Nal</a>...
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- 
+                        bạn đã nghe nhiều
+                    -->
+                <div class="discover-heard">
+                    <div class="discover-heard__singer">
+                        <img src="../img/ban-da-nghe-nhieu/a.jpg" alt="" class="discover-heard__singer-img">
+                        <div class="discover-heard__singer-text">
+                            <span class="discover-heard__singer-text__heard">BẠN ĐÃ NGHE NHIỀU</span> <br>
+                            <span class="discover-heard__singer-text__singer">R&B</span>
+                        </div>
+                    </div>
+
+                    <ul class="list-5-item__list">
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/ban-da-nghe-nhieu/1.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">2000s R&B</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Usher</a>,
+                                <a href="" class="discover-heard__item-singer">Alicia Keys</a>,
+                                <a href="" class="discover-heard__item-singer">Mariah Carey</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/ban-da-nghe-nhieu/2.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Still Over It</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Summer Walker</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/ban-da-nghe-nhieu/3.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">KEYS</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Alica Keys</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/ban-da-nghe-nhieu/4.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Are & Be</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Normani</a>,
+                                <a href="" class="discover-heard__item-singer">Chloe</a>,
+                                <a href="" class="discover-heard__item-singer">Ella Mai</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item">
+                            <img class="list-5-item__item-img" src="../img/ban-da-nghe-nhieu/5.jpg" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="discover-heard">
+                    <h3 class="text-h3">Mới Phát Hành</h3>
+
+                    <ul class="new-release-list">
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/nguoi-you-toi-lanh-lung-sat-da.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Người Yêu Tôi Lạnh Lùng Sắt Đá</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer">Mr.Siro</a>
+                                    </div>
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#1</span>
+                                    <span class="new-release__content-ratings_numbersub">28.02.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/2.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Đứt Đoạn Tình Duyên</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Yến Tattoo</a>
+                                    </div>
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#2</span>
+                                    <span class="new-release__content-ratings_numbersub">25.02.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/3.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Thiệp Hồng Anh Trao</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Tâm Tâm</a>,
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Híuv</a>,
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">HOA HỒNG ĐẠI MUSIC</a>
+                                    </div>
+                                        
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#3</span>
+                                    <span class="new-release__content-ratings_numbersub">01.03.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/4.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Vẫn Còn Zai Tốt</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Minh Vương M4U</a>
+                                    </div>
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#4</span>
+                                    <span class="new-release__content-ratings_numbersub">26.02.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/5.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Đứt Đoạn Tình Duyên</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Duy Minh</a>,
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">KxK</a>,
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">HOA HỒNG DẠI MUSIC</a>
+                                    </div>
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#5</span>
+                                    <span class="new-release__content-ratings_numbersub">27.02.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-release-list_item">
+                            <img src="../img/moi-phat-hanh/new/6.webp" alt="" class="new-release-list_item-img">
+                            <div class="new-release-list_item-content">
+                                <div class="new-release__content-songinfo">
+                                    <h4 class="new-release__content-mysong">Chạy Về Nơi Phía Anh</h4>
+                                    <div class="new-release__content-singer_link">
+                                        <a href="" class="discover-heard__item-singer new-release__content-singer">Khắc Việt</a>
+                                    </div>
+                                </div>
+                                <div class="new-release__content-ratings">
+                                    <span class="new-release__content-ratings_number">#6</span>
+                                    <span class="new-release__content-ratings_numbersub">14.02.2022</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="list-5-item__list discover-heard_list">
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/1.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">2000s R&B</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Usher</a>,
+                                <a href="" class="discover-heard__item-singer">Alicia Keys</a>,
+                                <a href="" class="discover-heard__item-singer">Mariah Carey</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/2.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Still Over It</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Summer Walker</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/3.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">KEYS</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Alica Keys</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/4.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">Are & Be</a>
+                            <p class="list-5-item__item-text">
+                                <a href="" class="discover-heard__item-singer">Normani</a>,
+                                <a href="" class="discover-heard__item-singer">Chloe</a>,
+                                <a href="" class="discover-heard__item-singer">Ella Mai</a>...
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/5.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/6.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/7.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/8.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/9.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/10.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/11.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/12.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                        <li class="list-5-item__item discover-heard__list-item__item">
+                            <img class="list-5-item__item-img" src="../img/moi-phat-hanh/13.webp" alt="#">
+                            <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
+                            <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
+                                <a href="" class="discover-heard__item-singer">Alessia Cara</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="discover-favorite-artist">
+                    <div class="discover-favorite-artist__singer">
+                        <img src="../img/ca-si-ban-thich/truong-hoan-yen.webp" alt="" class="discover-favorite-artist__singer-img">
+                        <div class="discover-favorite-artist__singer-love">
+                            <div class="discover-favorite-artist__singer-love_namesinger">
+                                <p class="discover-favorite-love_namesinger-text">CÓ THỂ BẠN THÍCH</p>
+                                <H3 class="discover-favorite-love_namesinger-name">Dương Hoàng Yến</H3>
+                            </div>
+                            <div class="discover-favorite-artist__singer-love-list">
+                                <img src="../img/ca-si-ban-thich/truong-hoan-yen-1.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/truong-hoan-yen-2.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/truong-hoan-yen-3.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/truong-hoan-yen-4.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discover-favorite-artist__singer">
+                        <img src="../img/ca-si-ban-thich/krirk.webp" alt="" class="discover-favorite-artist__singer-img">
+                        <div class="discover-favorite-artist__singer-love">
+                            <div class="discover-favorite-artist__singer-love_namesinger">
+                                <p class="discover-favorite-love_namesinger-text">VÌ BẠN NGHE NHIỀU</p>
+                                <H3 class="discover-favorite-love_namesinger-name">Karik</H3>
+                            </div>
+                            <div class="discover-favorite-artist__singer-love-list">
+                                <img src="../img/ca-si-ban-thich/krirk-1.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/krirk-2.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/krirk-3.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/krirk-4.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discover-favorite-artist__singer">
+                        <img src="../img/ca-si-ban-thich/TuanHung.webp" alt="" class="discover-favorite-artist__singer-img">
+                        <div class="discover-favorite-artist__singer-love">
+                            <div class="discover-favorite-artist__singer-love_namesinger">
+                                <p class="discover-favorite-love_namesinger-text">BẠN ĐÃ QUAN TÂM</p>
+                                <H3 class="discover-favorite-love_namesinger-name">Tuấn Hưng</H3>
+                            </div>
+                            <div class="discover-favorite-artist__singer-love-list">
+                                <img src="../img/ca-si-ban-thich/TuanHung-1.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/TuanHung-2.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/TuanHung-3.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                                <img src="../img/ca-si-ban-thich/TuanHung-4.webp" alt="" class="discover-favorite-artist__singer-love-list-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="top-music">
+        <div class="top-music__header">
+            <div class="top-music__header--option">
+                <div class="top-music__header--option-sub">
+                    <div class="option-playlists active">Danh sách phát</div>
+                    <div class="option-recently">Nghe gần đây</div>
+                </div>
+            </div>
+            <div class="top-music__header--setting">
+                <i class="top-music__header--setting-timer ti-timer" title="Hẹn giờ dừng phát nhạc"></i>
+                <i class="top-music__header--setting-different ti-more-alt" title="Khác"></i>
+            </div>
+        </div>
+        <div class="top-music__body">
+            <div class="option-playlists__child">
+                <ul class="option-playlists__child-broadcast">
+                    
+                </ul>
+                <p class="option-playlists__child-text-next">Tiếp theo</p>
+                <p class="playlists__child-next--text">Từ playlist<a href="#" class="playlists__child-next--link">Top 100 Bài Hát Nhạc Trẻ Hay Nhất</a></p>
+                <ul class="option-playlists__child-next">
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item1">
+                        <img class="playlists__child-next--item1-img" src="../img/Tung-Duong.jpg" alt="">
+                        <i class="playlists__child-next--item1-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item1__music-name">Ngày Chưa Giông Bão</h4>
+                            <a href="" class="playlists__child-next--item1__name-singer">Tùng Dương</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                    <li class="playlists__child-next--item">
+                        <img class="playlists__child-next--item-img" src="../img/ai-chung-tinh-duoc-mai.jpg" alt="">
+                        <i class="playlists__child-next--item-icon ti-control-play"></i>
+                        <div>
+                            <h4 class="playlists__child-next--item__music-name">Ai Chung Tình Được Mãi</h4>
+                            <a href="" class="playlists__child-next--item__name-singer">Đinh Tùng Huy</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="play-music">
+        <div class="play-music__name">
+            <div class="name-music__img">
+                <img src="../img/em-khac-gi-hoa.webp" alt="Ai Chung Tình Được Mãi">
+            </div>
+            <div class="container-name-music__sub">
+                <h4 class="container-name-music__name-music">Em khác gì hoa</h4>
+                <p class="container-name-music__name-music--sub">Lil Z</p>    
+            </div>
+            <div class="container-name-music__icon">
+                <i class="far fa-heart"></i>
+                <i class="container-name-music__icon-ellipsis fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div class="play-music__adjusted">
+            <div class="play-music__adjusted-icon">
+                <i class="ti-control-shuffle"></i>
+                <i class="ti-control-skip-backward"></i>
+                <i class="ti-control-play"></i>
+                <i class="ti-control-skip-forward"></i>
+                <i class="ti-loop"></i>
+            </div>
+            <div class="play-music__adjusted-percent">
+                <div class="play-music__adjusted--time-play">00:15</div>
+                <div class="play-music__adjusted--sound--bar"></div>
+                <div class="play-music__adjusted--time-the_song">00:15</div>
+            </div>
+        </div>
+        <div class="play-music__tools">
+            <i class=" play-music__tools-icon ti-desktop"></i>
+            <i class=" play-music__tools-icon fas fa-microphone"></i>
+            <i class=" play-music__tools-icon ti-new-window"></i>
+            <i class="play-music__tools-adjusted fas fa-volume-up">
+                <div class="play-music__tools-adjusted--sub"></div>
+            </i>
+            <div class="play-music__tools-seperats"></div>
+            <i class="play-music__tools-list far fa-list-alt"></i>
+        </div>
+    </div>
+
+
+    <script src="./mp3.js"></script>
+</body>
+</html>
