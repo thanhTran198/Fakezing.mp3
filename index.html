@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <link rel="stylesheet" href="./assets/main/style.css">
 </head>
@@ -190,11 +191,18 @@
             <!-- mục khám phá -->
             <div class="discover">
                 <div class="discover-animation">
-                    <img class="discover-animation__img img-discover_1" src="./assets/img/discover-img/1.jpg" alt="ảnh em ơi đừng sầu">
-                    <img class="discover-animation__img img-discover_2" src="./assets/img/discover-img/2.jpg" alt="ảnh hôm nay nghe gì">
-                    <img class="discover-animation__img img-discover_3" src="./assets/img/discover-img/3.jpg" alt="ảnh yêu phải tính">
-                    <img class="discover-animation__img img-discover_4" src="./assets/img/discover-img/4.jpg" alt="ảnh em khác gì hoa">
-                    <img class="discover-animation__img img-discover_5" src="./assets/img/discover-img/5.jpg" alt="ảnh em khác gì hoa">
+                    <div class="discover-animation__slider container-discover__slider-item-1">
+                        <img class="discover-animation__img img-discover_1" src="./assets/img/discover-img/1.jpg" alt="ảnh em ơi đừng sầu">
+                    </div>
+                    <div class="discover-animation__slider container-discover__slider-item-2">
+                        <img class="discover-animation__img img-discover_2" src="./assets/img/discover-img/2.jpg" alt="ảnh hôm nay nghe gì">
+                    </div>
+                    <div class="discover-animation__slider container-discover__slider-item-3">
+                        <img class="discover-animation__img img-discover_3" src="./assets/img/discover-img/3.jpg" alt="ảnh yêu phải tính">
+                    </div>
+                    <div class="discover-animation__slider container-discover__slider-item-4">
+                        <img class="discover-animation__img img-discover_4" src="./assets/img/discover-img/4.jpg" alt="ảnh em khác gì hoa">
+                    </div>
                     
                     <div class="discover-none">
                         <div class="directional">
@@ -217,31 +225,52 @@
                     </div>
                     <ul class="discover-recently__list">
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/100-nhac-tre.webp" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/100-nhac-tre.webp" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="Top 100 Bài Hát Nhạc Trẻ Hay Nhất">Top 100 Bài Hát Nhạc Trẻ Hay Nhất</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/zing-chart.jpg" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/zing-chart.jpg" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="#zingchart">#zingchart</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/nhac-Baroque-tap-trung.webp" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/nhac-Baroque-tap-trung.webp" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="Nhạc Baroque Giúp Tập Trung Học Tập">Nhạc Baroque Giúp Tập Trung Học Tập</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/zingchart-New-Release.jpg" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/zingchart-New-Release.jpg" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="#zingchart New Release">#zingchart New Release</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/Chillhop-Radio.webp" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/Chillhop-Radio.webp" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="Chillhop Radio">Chillhop Radio</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/Pocus-Ambient.webp" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/Pocus-Ambient.webp" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text">Pocus Ambient</a>
                         </li>
                         <li class="discover-recently-item">
-                            <img class="discover-recently__list-img" src="./assets/img/discover-recently/100-nhac-tre.webp" alt="">
+                            <a href="#" class="discover-recently-item-link zom-img">
+                                <img class="discover-recently__list-img" src="./assets/img/discover-recently/100-nhac-tre.webp" alt="">
+                                <i class="ti-control-play absolute-icon"></i>
+                            </a>
                             <a href="#" class="discover-recently__list-text" title="Top 100 Nhạc V-Pop Hay Nhất">Top 100 Nhạc V-Pop Hay Nhất</a>
                         </li>
                     </ul>
@@ -251,27 +280,42 @@
                     <h3 class="text-h3">Lựa Chọn Hôm Nay</h3>
                     <ul class="list-5-item__list">
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/todaychoice/V-Pop-Rising.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/todaychoice/V-Pop-Rising.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">V-Pop Rising</a>
                             <p class="list-5-item__item-text" title="Khám phá những tài năng Gen Z của...">Khám phá những tài năng Gen Z của...</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/todaychoice/Love-Pop.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/todaychoice/Love-Pop.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">Love Pop</a>
                             <p class="list-5-item__item-text" title="Không ai là không cần một bài ca tình yêu">Không ai là không cần một bài ca tình yêu</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/todaychoice/Rap-Việt-Hết-Hợp.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/todaychoice/Rap-Việt-Hết-Hợp.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">Rap Việt Hết Hợp</a>
                             <p class="list-5-item__item-text" title="Pha hội ngộ cực bén của Ráp Việt">Pha hội ngộ cực bén của Ráp Việt</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/todaychoice/Đỉnh-cao-Pop.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/todaychoice/Đỉnh-cao-Pop.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">Đỉnh cao Pop</a>
                             <p class="list-5-item__item-text" title="Ở đây có những ca khúc... Top Of The POP">Ở đây có những ca khúc... Top Of The POP</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/todaychoice/K-Pop-Newbie.jpg" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/todaychoice/K-Pop-Newbie.jpg" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">K-Pop Newbie</a>
                             <p class="list-5-item__item-text" title="BILLLIE và những tân binh khủng của...">BILLLIE và những tân binh khủng của...</p>
                         </li>
@@ -282,27 +326,42 @@
                     <h3 class="text-h3">XONE's CORNER</h3>
                     <ul class="list-5-item__list">
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/happy-songs.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/happy-songs.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">HAPPY SONGS</a>
                             <p class="list-5-item__item-text" title="Top 'bài hát hạnh phúc' được nghe nhiều nhất">Top "bài hát hạnh phúc" được nghe nhiều nhất</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/KEY-TAE-YEON.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/KEY-TAE-YEON.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">KEY x TAE YEON</a>
                             <p class="list-5-item__item-text" title="Bộ đôi tài năng phá đảo K-POP">Bộ đôi tài năng phá đảo K-POP</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/Asia-Tune-SOFT-POP.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/Asia-Tune-SOFT-POP.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">Asia Tune - SOFT POP</a>
                             <p class="list-5-item__item-text" title="JoungJae, Mỹ Anh, Bol4...">JoungJae, Mỹ Anh, Bol4...</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/XONE'sPICKs-RnB.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/XONE'sPICKs-RnB.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">XONE's PICKs - RnB</a>
                             <p class="list-5-item__item-text" title="Mood CHILL với nhạc RnB mê hoặc">Mood CHILL với nhạc RnB mê hoặc</p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/INDIE-HIT.jpg" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/XONE's-CORNER/INDIE-HIT.jpg" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">INDIE HITs</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">Tuyển chọn mới mỗi ngày bởi XONE</p>
                         </li>
@@ -314,7 +373,10 @@
                     <ul class="discover-radio-hot__list">
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/xone-radio.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/xone-radio.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-xone-radio.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -323,7 +385,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/on-air.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/on-air.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-on-air.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -332,7 +397,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/cham.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/cham.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-cham.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -341,7 +409,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/cham.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/cham.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-cham.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -350,7 +421,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/bolero.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/bolero.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-bolero.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -359,7 +433,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/US-UK.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/US-UK.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-US-UK.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -368,7 +445,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/K-POP.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/K-POP.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-K-POP.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -377,7 +457,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/acoutic.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/acoutic.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/sub-acoutic.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -386,7 +469,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/Rap-viet.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/Rap-viet.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/Rap-viet.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -395,7 +481,10 @@
                         </li>
                         <li class="discover-radio-hot__list-item">
                             <div class="discover-radio-hot__item-img">
-                                <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/the-on-radio.webp" alt="#">
+                                <a href="#" class="discover-radio-hot-link zom-img">
+                                    <img class="discover-radio-hot__item-imgdad" src="./assets/img/radio-noi-bat/the-on-radio.webp" alt="#">
+                                    <i class="ti-control-play absolute-icon-7"></i>
+                                </a>
                                 <img class="discover-radio-hot__item-imgchild" src="./assets/img/radio-noi-bat/the-on-radio.webp" alt="#">
                                 <span class="discover-radio-hot__live">LIVE</span>
                             </div>
@@ -480,7 +569,10 @@
                     <h3 class="text-h3">Nhạc Mới Mỗi Ngày</h3>
                     <ul class="list-5-item__list">
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/V-Pop-thang3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/V-Pop-thang3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">V-Pop Tháng 3/2022</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Hoàn Thùy Linh</a>,
@@ -489,7 +581,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/US-UK-thang3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/US-UK-thang3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">US-UK Tháng 3/2022</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Troye Sivan</a>,
@@ -498,7 +593,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/K-Pop-thang3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/K-Pop-thang3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">K-Pop Tháng 3/2022</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">TREASURE</a>,
@@ -507,7 +605,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/C-Pop-thang3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/C-Pop-thang3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="">C-Pop Tháng 3/2022</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">YU</a>,
@@ -516,7 +617,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/indie-viet-thang3.jpg" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/nhac-moi-moi-ngay/indie-viet-thang3.jpg" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a" href="" title="Indie Việt Tháng 3/2022">Indie Viet Tháng...</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Vũ Phụng Tiên</a>,
@@ -628,7 +732,10 @@
                     <h3 class="text-h3">Top 100</h3>
                     <ul class="list-5-item__list">
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/top100/V-POP.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/top100/V-POP.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc V-Pop Hay Nhất</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">ERIK</a>,
@@ -637,7 +744,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/top100/rap-viet.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/top100/rap-viet.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc Rap VIệt Nam Hay Nhất</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Lil Wuyn</a>,
@@ -646,7 +756,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/top100/rap,hip-hop.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/top100/rap,hip-hop.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Nhạc Rap/Hip Hop Âu Mỹ Hay Nhất</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">The Weeknd</a>,
@@ -655,7 +768,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/top100/nhac-tre.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/top100/nhac-tre.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Top 100 Bài Hát Nhạc Trẻ Hay Nhất</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">ERIK</a>,
@@ -664,7 +780,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/top100/pop-au-my.jpg" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/top100/pop-au-my.jpg" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="" title="Indie Việt Tháng 3/2022">Top 100 Pop Âu Mỹ Hay Nhất</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Adele</a>,
@@ -804,7 +923,10 @@
                     <h3 class="text-h3">Mixtape Yêu Thích</h3>
                     <ul class="discover-mixtape__list">
                         <li class="discover-mixtape__list-item">
-                            <img src="./assets/img/Mixtape/1.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img src="./assets/img/Mixtape/1.jpg" alt="" class="discover-mixtape__list-item-img">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <div class="discover-mixtape__list-item-linksinger">
                                 <a href="" class="discover-heard__item-singer">LyLy</a>,
                                 <a href="" class="discover-heard__item-singer">Anh Tú</a>,
@@ -812,7 +934,10 @@
                             </div>
                         </li>
                         <li class="discover-mixtape__list-item">
-                            <img src="./assets/img/Mixtape/2.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img src="./assets/img/Mixtape/2.jpg" alt="" class="discover-mixtape__list-item-img">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <div class="discover-mixtape__list-item-linksinger">
                                 <a href="" class="discover-heard__item-singer">Châu Khải Phong</a>,
                                 <a href="" class="discover-heard__item-singer">Chu Bin</a>,
@@ -820,7 +945,10 @@
                             </div>
                         </li>
                         <li class="discover-mixtape__list-item">
-                            <img src="./assets/img/Mixtape/3.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img src="./assets/img/Mixtape/3.jpg" alt="" class="discover-mixtape__list-item-img">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <div class="discover-mixtape__list-item-linksinger">
                                 <a href="" class="discover-heard__item-singer">Nhật Phong</a>,
                                 <a href="" class="discover-heard__item-singer">Đinh Tùng Huy</a>,
@@ -828,7 +956,10 @@
                             </div>
                         </li>
                         <li class="discover-mixtape__list-item">
-                            <img src="./assets/img/Mixtape/4.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img src="./assets/img/Mixtape/4.jpg" alt="" class="discover-mixtape__list-item-img">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <div class="discover-mixtape__list-item-linksinger">
                                 <a href="" class="discover-heard__item-singer">Noo Phước Thịnh</a>,
                                 <a href="" class="discover-heard__item-singer">Hiền Hồ</a>,
@@ -836,7 +967,10 @@
                             </div>
                         </li>
                         <li class="discover-mixtape__list-item">
-                            <img src="./assets/img/Mixtape/5.jpg" alt="" class="discover-mixtape__list-item-img">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img src="./assets/img/Mixtape/5.jpg" alt="" class="discover-mixtape__list-item-img">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <div class="discover-mixtape__list-item-linksinger">
                                 <a href="" class="discover-heard__item-singer">Thiên Tú</a>,
                                 <a href="" class="discover-heard__item-singer">Lee ken</a>,
@@ -859,7 +993,10 @@
 
                     <ul class="list-5-item__list">
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/1.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/1.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">2000s R&B</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Usher</a>,
@@ -868,21 +1005,30 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/2.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/2.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Still Over It</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Summer Walker</a>
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">KEYS</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Alica Keys</a>
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/4.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/4.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Are & Be</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Normani</a>,
@@ -891,7 +1037,10 @@
                             </p>
                         </li>
                         <li class="list-5-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/5.jpg" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/ban-da-nghe-nhieu/5.jpg" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
@@ -1003,7 +1152,10 @@
 
                     <ul class="list-5-item__list discover-heard_list">
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/1.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/1.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">2000s R&B</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Usher</a>,
@@ -1012,21 +1164,30 @@
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/2.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/2.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Still Over It</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Summer Walker</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/3.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/3.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">KEYS</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Alica Keys</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/4.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/4.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">Are & Be</a>
                             <p class="list-5-item__item-text">
                                 <a href="" class="discover-heard__item-singer">Normani</a>,
@@ -1035,63 +1196,90 @@
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/5.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/5.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/6.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/6.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/7.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/7.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/8.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/8.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/9.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/9.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/10.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/10.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/11.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/11.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/12.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/12.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>
                             </p>
                         </li>
                         <li class="list-5-item__item discover-heard__list-item__item">
-                            <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/13.webp" alt="#">
+                            <a href="#" class="list-5-item-link zom-img">
+                                <img class="list-5-item__item-img" src="./assets/img/moi-phat-hanh/13.webp" alt="#">
+                                <i class="ti-control-play absolute-icon-5"></i>
+                            </a>
                             <a class="list-5-item__item-a discover-top100__link" href="">In The Meantime</a>
                             <p class="list-5-item__item-text" title="Tuyển chọn mới mỗi ngày bởi XONE">
                                 <a href="" class="discover-heard__item-singer">Alessia Cara</a>

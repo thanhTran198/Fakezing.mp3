@@ -38,9 +38,58 @@ html {
     cursor: pointer;
 }
 
+.relative-icon {
+    position: relative;
+}
+.absolute-icon {
+    position: absolute;
+    color: #fff;
+    font-weight: 100;
+    z-index: 200;
+    display: none;
+    font-size: 28px;
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: 32px;
+    left: 30px;
+}
+.absolute-icon-5 {
+    position: absolute;
+    color: #fff;
+    font-weight: 100;
+    z-index: 200;
+    display: none;
+    font-size: 28px;
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: 60px;
+    left: 60px;
+}
+
+
+.zom-img:hover .absolute-icon-5 {
+    display: block;
+}
+
 body {
     width: 100%;
     display: flex;
+}
+
+.zom-img {
+    position: relative;
+}
+.zom-img img {
+    transition: all 0.3s ease-in-out;
+}
+.zom-img:hover img {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+.zom-img:hover .absolute-icon {
+    display: block;
 }
 
 #category {
@@ -827,10 +876,18 @@ body {
     width: 110px;
 }
 
+.discover-recently-item-link {
+    width: 110px;
+    height: 110px;
+    border-radius:5px;
+    display: inline-block;
+    overflow: hidden;
+}
+
 .discover-recently__list-img {
     width: 110px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .discover-recently__list-text:hover {
@@ -838,6 +895,7 @@ body {
 }
 
 .discover-recently__list-text {
+    margin-top: 10px;
     text-decoration: none;
     color: #fff;
     height: 32px;
@@ -866,6 +924,14 @@ body {
 
 .list-5-item__item {
     width: 160px;
+}
+
+.list-5-item-link {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .list-5-item__item-img {
@@ -932,6 +998,30 @@ body {
     border-radius:50%;
 }
 
+.discover-radio-hot-link {
+    width: 106px;
+    border-radius:50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.absolute-icon-7 {
+    position: absolute;
+    color: #fff;
+    font-weight: 100;
+    z-index: 200;
+    display: none;
+    font-size: 28px;
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: 32px;
+    left: 30px;
+}
+.zom-img:hover .absolute-icon-7 {
+    display: block;
+}
+
 .discover-radio-hot__item-imgchild {
     position: absolute;
     width: 36px;
@@ -953,7 +1043,7 @@ body {
     background-color: #ff0a0a;
     border-radius:2px;
     color: #fff;
-    bottom: 0;
+    bottom: 4px;
     right: 40px;
 }
 
@@ -1238,6 +1328,21 @@ body {
 .zingchart-week__kpop-img {
     width: 286px;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.zingchart-week__vn, .zingchart-usuk, .zingchart-week__kpop {
+    width: 286px;
+    height: 82px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.zingchart-week__vn-img:hover,
+.zingchart-week__usuk-img:hover, 
+.zingchart-week__kpop-img:hover {
+   transform: scale(1.1);
+   opacity: 0.6;
 }
 
 /* khám phá - dánh sách ca sĩ */
@@ -1254,6 +1359,9 @@ body {
 
 .this-singer__list-item-img {
     width: 104px;
+}
+.this-singer__list-item-img:hover {
+    opacity: 0.4;
 }
 
 /* khám phá - top 100 */
@@ -1501,19 +1609,73 @@ body {
 /* 
 Khám phá - nghệ sĩ yêu thích
 */
+.discover-favorite-artist {
+    display: flex;
+    justify-content: space-between;
+}
+
 .discover-favorite-artist__singer {
     position: relative;
 }
 
+.discover-favorite-artist__singer-love {
+    display: flex;
+}
+
+.discover-favorite-artist__singer-love_namesinger {
+    position: absolute;
+    top: 130px;
+    z-index: 3;
+    color: #fff;
+    margin-left: 12px;
+}
+
+.discover-favorite-love_namesinger-text {
+    font-size: 12px;
+    font-weight:600;
+}
+.discover-favorite-love_namesinger-name {
+    font-size: 24px;
+}
+
 .discover-favorite-artist__singer-img {
-    width: 250px;
+    width: 288px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
     z-index: 1;
 }
 
 .discover-favorite-artist__singer-love-list {
     position: absolute;
+    bottom: 12px;
 }
 
 .discover-favorite-artist__singer-love-list-img {
     z-index: 2;
+    width: 58px;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+.discover-favorite-artist__singer-love-list-img:first-child {
+    margin-left: 14px;
+}
+.discover-favorite-artist__singer-love-list-img:last-child {
+    margin-right: 14px;
+}
+
+.container-discover__slider-item-1 {
+    transform: translateX(-100%);
+}
+.container-discover__slider-item-2 {
+    transform: translateX(-100%);
+}
+.container-discover__slider-item-3 {
+    transform: translateX(-100%);
+}
+.container-discover__slider-item-4 {
+    transform: translateX(-100%);
+}
+.container-discover__slider-item-none {
+    transform: translateX(-200%);
 }

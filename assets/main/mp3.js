@@ -157,6 +157,18 @@ listUserFolows.forEach((listUserFolow)=> {
     
     listUserFolow.style.left = listUserFolow.offsetLeft + 10 + 'px';
     stackUp ++
-    console.log(listUserFolow)
-    console.log(stackUp)
 })
+
+//  slider đảo ảnh tag khám phá
+let sliderIndex1 = 1;
+const sliderDiscover = $$('.discover-animation__slider')
+changeImg1Replate = function() {
+    sliderDiscover.forEach((item, index) => {
+        // console.log(index)
+        if(index == sliderIndex1) {
+            sliderDiscover[index].classList.replace('container-discover__slider-item-1', 'container-discover__slider-item-none')
+            console.log('đã chạy')
+        }
+    })
+}
+changeImg1Replate()
