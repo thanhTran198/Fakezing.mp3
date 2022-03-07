@@ -795,9 +795,23 @@ body {
     cursor: pointer;
     transition: transform .25s linear;
 }
+.discover-animation:first-child {
+    margin-left: -15px;
+}
+.discover-animation:last-child {
+    margin-right: -15px;
+}
+
+.discover-animation__slider {
+    transition: transform .9s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
 
 .discover-animation__img {
-    width: 272px;
+    width: 280px;
     height: 168px;
     border-radius:8px;
     margin: 0 15px;
@@ -1662,20 +1676,4 @@ Khám phá - nghệ sĩ yêu thích
 }
 .discover-favorite-artist__singer-love-list-img:last-child {
     margin-right: 14px;
-}
-
-.container-discover__slider-item-1 {
-    transform: translateX(-100%);
-}
-.container-discover__slider-item-2 {
-    transform: translateX(-100%);
-}
-.container-discover__slider-item-3 {
-    transform: translateX(-100%);
-}
-.container-discover__slider-item-4 {
-    transform: translateX(-100%);
-}
-.container-discover__slider-item-none {
-    transform: translateX(-200%);
 }

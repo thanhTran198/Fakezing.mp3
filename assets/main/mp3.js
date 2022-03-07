@@ -160,15 +160,83 @@ listUserFolows.forEach((listUserFolow)=> {
 })
 
 //  slider đảo ảnh tag khám phá
-let sliderIndex1 = 1;
-const sliderDiscover = $$('.discover-animation__slider')
-changeImg1Replate = function() {
-    sliderDiscover.forEach((item, index) => {
-        // console.log(index)
-        if(index == sliderIndex1) {
-            sliderDiscover[index].classList.replace('container-discover__slider-item-1', 'container-discover__slider-item-none')
-            console.log('đã chạy')
+const imgSliderDiscovers = $$('.discover-animation__slider');
+let sttImg = 1;
+const imgSliderDiscover1 = $('.discover-animation__slider-1');
+const imgSliderDiscover2 = $('.discover-animation__slider-2');
+const imgSliderDiscover3 = $('.discover-animation__slider-3');
+const imgSliderDiscover4 = $('.discover-animation__slider-4');
+
+motionProcessing = function() {
+    imgSliderDiscovers.forEach((imgSliderDiscover, index)=>{
+        if(sttImg == 1) {
+            console.log('số 1')
+            imgSliderDiscover1.style.transform = 'translateX(100%)';
+            imgSliderDiscover1.style.opacity = '0';
+    
+            imgSliderDiscover2.style.transform = 'translateX(-100%)';
+    
+            imgSliderDiscover3.style.transform = 'translateX(-100%)';
+    
+            imgSliderDiscover4.style.transform = 'translateX(-100%)';
+        }else if(sttImg == 2) {
+            console.log('số 2')
+            imgSliderDiscover2.style.transform = 'translateX(0%)';
+            imgSliderDiscover2.style.opacity = '0';
+
+            imgSliderDiscover3.style.transform = 'translateX(-200%)';
+
+            imgSliderDiscover4.style.transform = 'translateX(-200%)';
+
+            imgSliderDiscover1.style.transform = 'translateX(200%)';
+            imgSliderDiscover1.style.opacity = '1';
+        }else if(sttImg == 3) {
+            console.log('số 3')
+            imgSliderDiscover3.style.transform = 'translateX(-100%)';
+            imgSliderDiscover3.style.opacity = '0';
+
+            imgSliderDiscover4.style.transform = 'translateX(-300%)';
+
+            imgSliderDiscover1.style.transform = 'translateX(100%)';
+
+            imgSliderDiscover2.style.transform = 'translateX(100%)';
+            imgSliderDiscover2.style.opacity = '1';
+
+        }else if(sttImg == 4) {
+            console.log('số 4')
+            imgSliderDiscover4.style.transform = 'translateX(-200%)';
+            imgSliderDiscover4.style.opacity = '0';
+
+            imgSliderDiscover1.style.transform = 'translateX(0%)';
+
+            imgSliderDiscover2.style.transform = 'translateX(0%)';
+            
+            imgSliderDiscover3.style.transform = 'translateX(0%)';
+            imgSliderDiscover3.style.opacity = '1';
+            presently = function () {
+                imgSliderDiscover4.style.opacity = '1';
+            }
+            setTimeout(presently, 3000)
+        }else if(sttImg == 5) {
+            console.log('số 5')
+            imgSliderDiscover1.style.transform = 'translateX(100%)';
+            imgSliderDiscover1.style.opacity = '0';
+    
+            imgSliderDiscover2.style.transform = 'translateX(-100%)';
+    
+            imgSliderDiscover3.style.transform = 'translateX(-100%)';
+    
+            imgSliderDiscover4.style.transform = 'translateX(-100%)';
         }
     })
 }
-changeImg1Replate()
+
+countPhotos = function() {
+    motionProcessing()
+    sttImg++
+    if(sttImg >=5) {
+        sttImg = 1
+    }
+}
+// motionProcessing()
+setInterval(countPhotos, 5000)
