@@ -55,19 +55,12 @@ function topicIndividual() {
 
 chanNames.forEach((chanName, index) => {
     chanName.onclick = function() {
-        //lấy text của 2 item sắp đổi tên cho nhau
         const textChanName = chanName.innerText;
         const artist = $$$('change-name').innerText;
-        //lấy các class của 2 item lưu vòa biến
-        // const classChanName = $$$('change-name').classList;
-        // const classChannameChild = chanName.classList;
         
         //đổi tên cho nhau
         $$$('change-name').innerText = textChanName;
         chanName.innerText = artist;
-        //đổi class cho nhau
-        // $$$('change-name').classList = classChannameChild;
-        // chanName.classList = classChanName;
 
         //chuyển active về chanName
         $('.topic-content__individual-option__li.active').classList.remove('active');
@@ -77,35 +70,6 @@ chanNames.forEach((chanName, index) => {
         $('.topic-content__individual-option__li-icon--sub').style.display = 'none';
     };
 });
-
-
-// chuyển ảnh
-window.addEventListener("load", function() {
-    const slider = $('.slider');
-    const sliderMain = $('.slider-main');
-    const sliderItems = $$('.discover-animation__img');
-    const nextBtn = $('.directional-icon-left');
-    const prevBtn = $('.directional-icon-right');
-    const dotItems = $$('.slider-dot-item');
-    var sliderX = 0;
-
-    prevBtn.addEventListener("click", function() {
-        let sliderItem = sliderItems[sliderX];
-        sliderItem.style.marginLeft = '-288px';
-        sliderX++;
-        if(sliderX >= sliderItems.length) {
-            sliderX = 0;
-        }
-    })
-    nextBtn.addEventListener("click", function() {
-        let sliderItem = sliderItems[sliderX];
-        if(sliderItem.style.marginLeft = '-288px') {
-            sliderItem.style.marginLeft = '288px';
-            sliderX--;
-        }
-    })
-})
-
  
 var hoverTheSongs = $$('.playlists__child-next--item');
 
@@ -171,41 +135,55 @@ listUserFolows.forEach((listUserFolow)=> {
     stackUp ++
 })
 
+
+
 //  slider đảo ảnh tag khám phá
-const imgSliderDiscovers = $$('.discover-animation__slider');
-let sttImg = 1;
-const imgSliderDiscover1 = $('.discover-animation__slider-1');
-const imgSliderDiscover2 = $('.discover-animation__slider-2');
-const imgSliderDiscover3 = $('.discover-animation__slider-3');
-const imgSliderDiscover4 = $('.discover-animation__slider-4');
-const iconTransferPhotos = $$('.directional-icon')
+const imgSliderDiscovers = $$('.discover-animation__slider')
+const imgSliderDiscover1 = $('.discover-animation__slider-1')
+const imgSliderDiscover2 = $('.discover-animation__slider-2')
+const imgSliderDiscover3 = $('.discover-animation__slider-3')
+const imgSliderDiscover4 = $('.discover-animation__slider-4')
+const containerSlider = $('.discover-animation')
+let sttImg = 1
+const iconSliders = $$('.directional-icon-slider')
+const nextBtn = $('.directional-icon-left')
+const prevBtn = $('.directional-icon-right')
 
 motionProcessing = function() {
     imgSliderDiscovers.forEach(()=>{
         if(sttImg == 1) {
+            console.log('số 1')
             imgSliderDiscover1.style.transform = 'translateX(100%)';
-            imgSliderDiscover1.style.opacity = '0';
+            imgSliderDiscover1.style.opacity = '1';
     
             imgSliderDiscover2.style.transform = 'translateX(-100%)';
+            imgSliderDiscover2.style.opacity = '1';
     
             imgSliderDiscover3.style.transform = 'translateX(-100%)';
+            imgSliderDiscover3.style.opacity = '0';
     
             imgSliderDiscover4.style.transform = 'translateX(-100%)';
+            imgSliderDiscover4.style.opacity = '1';
         }else if(sttImg == 2) {
+            console.log('số 2')
             imgSliderDiscover2.style.transform = 'translateX(0%)';
-            imgSliderDiscover2.style.opacity = '0';
+            imgSliderDiscover2.style.opacity = '1';
 
             imgSliderDiscover3.style.transform = 'translateX(-200%)';
+            imgSliderDiscover3.style.opacity = '1';
 
             imgSliderDiscover4.style.transform = 'translateX(-200%)';
+            imgSliderDiscover4.style.opacity = '0';
 
             imgSliderDiscover1.style.transform = 'translateX(200%)';
             imgSliderDiscover1.style.opacity = '1';
         }else if(sttImg == 3) {
+            console.log('số 3')
             imgSliderDiscover3.style.transform = 'translateX(-100%)';
-            imgSliderDiscover3.style.opacity = '0';
+            imgSliderDiscover3.style.opacity = '1';
 
             imgSliderDiscover4.style.transform = 'translateX(-300%)';
+            imgSliderDiscover4.style.opacity = '1';
 
             imgSliderDiscover1.style.transform = 'translateX(100%)';
 
@@ -213,32 +191,38 @@ motionProcessing = function() {
             imgSliderDiscover2.style.opacity = '1';
 
         }else if(sttImg == 4) {
+            console.log('số 4')
             imgSliderDiscover4.style.transform = 'translateX(-200%)';
-            imgSliderDiscover4.style.opacity = '0';
+            imgSliderDiscover4.style.opacity = '1';
 
             imgSliderDiscover1.style.transform = 'translateX(0%)';
+            imgSliderDiscover1.style.opacity = '1';
 
             imgSliderDiscover2.style.transform = 'translateX(0%)';
+            imgSliderDiscover2.style.opacity = '0';
             
             imgSliderDiscover3.style.transform = 'translateX(0%)';
             imgSliderDiscover3.style.opacity = '1';
-            presently = function () {
-                imgSliderDiscover2.style.opacity = '3';
-                imgSliderDiscover4.style.opacity = '1';
-            }
-            setTimeout(presently, 5000)
-        }else if(sttImg == 5) {
-            imgSliderDiscover1.style.transform = 'translateX(100%)';
-            imgSliderDiscover1.style.opacity = '0';
-    
-            imgSliderDiscover2.style.transform = 'translateX(-100%)';
-    
-            imgSliderDiscover3.style.transform = 'translateX(-100%)';
-    
-            imgSliderDiscover4.style.transform = 'translateX(-100%)';
+            // presently = function () {
+            //     imgSliderDiscover2.style.opacity = '3';
+            //     imgSliderDiscover4.style.opacity = '1';
+            // }
+            // setTimeout(presently, 5000)
         }
+        // }else if(sttImg == 5) {
+        //     console.log('số 5')
+        //     imgSliderDiscover1.style.transform = 'translateX(100%)';
+        //     imgSliderDiscover1.style.opacity = '0';
+    
+        //     imgSliderDiscover2.style.transform = 'translateX(-100%)';
+    
+        //     imgSliderDiscover3.style.transform = 'translateX(-100%)';
+    
+        //     imgSliderDiscover4.style.transform = 'translateX(-100%)';
+        // }
     })
 }
+// xử lý dảo ảnh cho slider 
 countPhotos = function() {
     motionProcessing()
     sttImg++
@@ -247,25 +231,74 @@ countPhotos = function() {
     }
 }
 // sét thời gian để tự chuyển ảnh
-setInterval(countPhotos, 5000);
+var setTimeSrart = setInterval(countPhotos, 5000);
 
+// người dùng đưa chuột vào slider dừng lại
+containerSlider.onmouseover = function() {
+    clearInterval(setTimeSrart)
+}
+// người dùng đưa chuột ra khỏi slider thì chạy lại
+containerSlider.onmouseout = function() {
+    setTimeSrart = setInterval(countPhotos, 5000);
+}
 
+// xử lý khi người dùng click vào nút trái đổi ảnh slider
+nextBtn.onclick = function() {
+    console.log('tiến')
+    sttImg--
+    if(sttImg < 1) {
+        sttImg = 4
+    }
+    motionProcessing()
+}
+// xử lý khi người dùng nhấn nút phải slider
+prevBtn.onclick = function() {
+    console.log('lùi')
+    sttImg++
+    if(sttImg > 4) {
+        sttImg = 1
+    }
+    motionProcessing()
+}
+
+// xử lý thả tim cho bài hát đang phát
+const heartBland = $('.container-name-music__icon-heart-bland')
+const heartDark = $('.container-name-music__icon-heart-dark')
+heartBland.onclick = function() {
+    heartBland.style.display = 'none'
+    heartDark.style.display = 'block'
+}
+heartDark.onclick = function() {
+    heartDark.style.display = 'none'
+    heartBland.style.display = 'block'
+}
+function resestHeart() {
+    heartDark.style.display = 'none'
+    heartBland.style.display = 'block'
+}
 
 // xử lý hát và render giao diện
-const heading = $('.container-name-music__name-music');
-const singerName = $('.container-name-music__name-music--sub');
-const cdThumb = $('.name-music__img-img');
-const audio = $('#audio');
-const playBtn = $('.changeicon');
-const iconPlay = $('.play-music__adjusted-play');
-const iconPause = $('.play-music__adjusted-pause');
-const progress = $('#progress');
-const nextSong = $('.play-music__adjusted-forward');
-const prevSong = $('.play-music__adjusted-backward');
-const randumSong = $('.play-music__adjusted-shuffle');
-const repeat = $('.play-music__adjusted-loop');
-const listSong = $('.playlists__child-next--item');
+const heading = $('.container-name-music__name-music')
+const singerName = $('.container-name-music__name-music--sub')
+const cdThumb = $('.name-music__img-img')
+const audio = $('#audio')
+const playBtn = $('.changeicon')
+const iconPlay = $('.play-music__adjusted-play')
+const iconPause = $('.play-music__adjusted-pause')
+const progress = $('#progress')
+const nextSong = $('.play-music__adjusted-forward')
+const prevSong = $('.play-music__adjusted-backward')
+const randumSong = $('.play-music__adjusted-shuffle')
+const repeat = $('.play-music__adjusted-loop')
+const listSong = $('.playlists__child-next--item')
 const playList = $('.option-playlists__child-next')
+const timeSong = $('.play-music__adjusted--time-the_song')
+const timePlaying = $('.play-music__adjusted--time-play')
+const volumeSong = $('.volumeSong')
+const containerIconVolume = $('.volume-song')
+const muteSong = $('.volume-song-mute')
+const maxSong = $('.volume-song-max')
+
 
 
 const app = {
@@ -273,7 +306,20 @@ const app = {
     isPlaying: false,
     isRandum: false,
     isRepeat: false,
+    isProgress: true,
     songs: [
+        {
+            name: "Sắp 30",
+            singer: "Trịnh Đình Quang",
+            path: "./assets/songs/Sap-30-Trinh-Dinh-Quang.mp3",
+            image: "./assets/img-songs/sap-30-TDQ.jpg"
+        },
+        {
+            name: "Bông Hoa Đẹp Nhất",
+            singer: "Quân AP",
+            path: "./assets/songs/Bong-Hoa-Dep-Nhat-QuanA_P.mp3",
+            image: "./assets/img-songs/Bong_hoa_dep_nhat-quanAP.jpg"
+        },
         {
             name: "Nhắm Mắt Thấy Mùa Hè",
             singer: "Hà Anh Tuấn",
@@ -333,7 +379,19 @@ const app = {
             singer: "Phạm Hoàng Dung",
             path: "./assets/songs/don_gian_em_yeu_anh_pham_bao_nam_x_dunghoangpham_cove.mp3",
             image: "./assets/img-songs/don-gian-em-yeu-anh.jpg"
-        }
+        },
+        {
+            name: "Hạt Mưa Vương Vấn",
+            singer: "Phạm Hoàng Dung",
+            path: "./assets/songs/Hat-Mua-Vuong-Van-DungHoangPham-Cove.mp3",
+            image: "./assets/img-songs/hat-mua-vuong-van.jpg"
+        },
+        {
+            name: "Thất Tình",
+            singer: "Trịnh Đình Quang",
+            path: "./assets/songs/That-Tinh-Trinh-Dinh-Quang.mp3",
+            image: "./assets/img-songs/that-tinh-TDQ.jpg"
+        },
     ],
 
     render: function() {
@@ -347,7 +405,7 @@ const app = {
                     </div>
                     <div>
                         <h4 class="playlists__child-next--item__music-name">${song.name}</h4>
-                        <a href="" class="playlists__child-next--item__name-singer">${song.singer}</a>
+                        <a href="#" class="playlists__child-next--item__name-singer">${song.singer}</a>
                     </div>
                 </li>
             `
@@ -365,30 +423,58 @@ const app = {
     },
 
     handleEvents: function() {
-        const _this = this //this ở đây nói đến app
+        const _this = this
+        const audioDuration = audio.duration
         // xử lý khi click play
         playBtn.onclick = function() {
             if(_this.isPlaying) {
-                _this.isPlaying = false;
-                audio.pause();
-                iconPause.style.display = 'none';
-                iconPlay.style.display = 'block';
+                _this.isPlaying = false
+                audio.pause()
+                iconPause.style.display = 'none'
+                iconPlay.style.display = 'block'
             }else {
-                _this.isPlaying = true;
-                audio.play();
-                iconPause.style.display = 'block';
+                _this.isPlaying = true
+                audio.play()
+                iconPause.style.display = 'block'
                 iconPlay.style.display = 'none';
             }
         }
 
         // khi tiến độ bài hát thay đổi
         audio.ontimeupdate = function() {
-            if(audio.duration) {
-                // lấy ra phần trăm của bài hát
+            if(audio.duration && _this.isProgress == true) {
                 const progressPercent = Math.floor(audio.currentTime / audio.duration * 100)
                 progress.value = progressPercent
             }
+
+            // thời gian đang Phát
+            let seconds = Number(audio.currentTime.toFixed(0))
+            let subSeconds = seconds % 60 
+            let second = ('0' + subSeconds).slice(-2)
+            let subMinute = Math.floor(seconds % 3600 / 60)
+            let minute = ('0' + subMinute).slice(-2)
+            timePlaying.innerText = minute + ':' + second
+
+            // Tổng thời gian bài hát
+            if(audio.duration) {
+                const timeSongs = Number(audio.duration.toFixed(0))
+                let subMimuteTimeSong = timeSongs / 60
+                let mimuteTimeSong = ('0' + subMimuteTimeSong.toFixed(0)).slice(-2)
+                let subSecondTimeSong = timeSongs % 60
+                let secondTimeSong = ('0' + subSecondTimeSong.toFixed(0)).slice(-2)
+                timeSong.innerText = mimuteTimeSong + ':' + secondTimeSong
+            }
         }
+
+        // xử lý khi người dùng thả chuột ở thanh kéo tua bài hát
+        progress.onmouseup = function(e) {
+            _this.isProgress = true
+        }
+        // xử lý khi người dùng nhấn chuột ở thanh kéo tua bài hát
+        progress.onmousedown = function(e) {
+            _this.isProgress = false
+        }
+
         // xử lý khi tua bài Hát
         progress.onchange = function(e) {
             const seekTime = audio.duration / 100 * e.target.value;
@@ -406,6 +492,8 @@ const app = {
             }
                 audio.play();
                 _this.render();
+                _this.scrollToActiveSong()
+                resestHeart()
         }
         //  khi lui bài hát
         prevSong.onclick = function() {
@@ -418,6 +506,8 @@ const app = {
             }
             audio.play();
             _this.render();
+            _this.scrollToActiveSong()
+            resestHeart()
         }
         //xử lý khi randum bật/tắt bài hát
         randumSong.onclick = function() {
@@ -451,6 +541,7 @@ const app = {
                     _this.nextSong()
                 }
                 audio.play()
+                _this.render()
             }
         }
         // lắng nghe hành vi click vào playlist
@@ -472,6 +563,35 @@ const app = {
                 }
             }
         }
+        // xử lý âm thanh
+        volumeSong.onchange = function(e) {
+            audio.volume = e.target.value
+            if(e.target.value == 0) {
+                muteSong.style.display = 'block'
+                maxSong.style.display = 'none'
+            }else {
+                muteSong.style.display = 'none'
+                maxSong.style.display = 'block'
+            }
+        }
+        containerIconVolume.onclick = function() {
+            if(muteSong.style.display == 'none') {
+                muteSong.style.display = 'block'
+                maxSong.style.display = 'none'
+            }else {
+                muteSong.style.display = 'none'
+                maxSong.style.display = 'block'
+            }
+        }
+    },
+    scrollToActiveSong: function() {
+        setTimeout(() => {
+            $('.playlists__child-next--item.active-song').scrollIntoView({
+                behavior: 'smooth',
+                block:'nearest'
+            })
+        })
+        console.log('chạy')
     },
 
     loadCurrentSong: function() {
@@ -489,7 +609,7 @@ const app = {
     },
     prevSong: function() {
         this.currentIndex--
-        if(this.currentIndex < 1) {
+        if(this.currentIndex < 0) {
             this.currentIndex = this.songs.length - 1;
         }
         this.loadCurrentSong();

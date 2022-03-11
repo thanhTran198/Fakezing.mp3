@@ -84,19 +84,14 @@ body {
     display: flex;
 }
 
-.zom-img {
-    position: relative;
+.hover-zom:hover img {
+    transform: scale(1.1);
 }
-.zom-img img {
+
+.hover-zom img {
     transition: all 0.3s ease-in-out;
 }
-.zom-img:hover img {
-    transform: scale(1.1);
-    opacity: 0.4;
-}
-.zom-img:hover .absolute-icon {
-    display: block;
-}
+
 
 #category {
     width: 15%;
@@ -179,6 +174,7 @@ body {
     display: inline-block;
     margin-left: 5px;
 }
+
 .level-icon {
     padding: 12px;
     background-color:rgba(255, 255, 255, 0.123);
@@ -293,7 +289,7 @@ body {
     color: var(--text-color);
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .name-music__img {
@@ -305,6 +301,7 @@ body {
 
 .name-music__img img {
     width: 60px;
+    height:60px;
     border-radius: 5px;
 }
 
@@ -320,11 +317,8 @@ body {
 }
 
 .container-name-music__name-music {
-    /* width: ;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1; */
-
+    margin-bottom: 6px;
+    font-size: 14px;
 }
 
 .container-name-music__name-music--sub {
@@ -333,10 +327,18 @@ body {
 
 .container-name-music__icon {
     margin-left: 30px;
+    display: flex;
 }
 
 .container-name-music__icon-ellipsis {
     padding: 0 20px;
+    position: relative;
+}
+
+
+.container-name-music__icon-heart-dark {
+    color: red;
+    display: none;
 }
 
 .play-music__adjusted {
@@ -366,6 +368,11 @@ body {
     top: -18px;
     left: 8px;
 }
+.changeicon:active {
+    color: var(--buttom-color);
+    background-color: var(--buttom-color);
+}
+
 .play-music__adjusted-play, .play-music__adjusted-pause {
     position: absolute;
     font-size: 20px;
@@ -419,6 +426,11 @@ body {
     display: flex;
     align-items: center;
     margin-left: 12px;
+    padding: 4px;
+}
+
+.volume-song-mute {
+    display: none;
 }
 
 .play-music__tools-adjusted--sub {
@@ -432,6 +444,12 @@ body {
 .play-music__tools-seperats {
     border-right: 1px solid rgb(80, 80, 80);
     height: 32px;
+}
+
+.volumeSong {
+    width: 80px;
+    height: 2px;
+    margin: 0 6px;
 }
 
 #top-music {
@@ -738,7 +756,24 @@ body {
 
 .option-playlists__child {
     width: 100%;
+    height: 79vh;
+    overflow-y: scroll;
 }
+.option-playlists__child::-webkit-scrollbar {
+    width: 4px;
+    display: none;
+}
+.option-playlists__child::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    background-color: transparent
+}
+.option-playlists__child::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius:5px;
+}
+.option-playlists__child::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .option-playlists__child-text-next {
     margin-top: 16px;
@@ -794,7 +829,7 @@ body {
 }
 
 .option-playlists__child-next:hover .playlists__child-next--item-icon{
-    display: block;
+    /* display: block; */
 }
 
 .playlists__child-next--item {
@@ -851,6 +886,10 @@ body {
 .playlists__child-next--item__name-singer:hover {
     text-decoration: revert;
     color: var(--buttom-color);
+}
+
+.playlists__child-next--item.active-song .playlists__child-next--item__name-singer {
+    color: var(--Subtitles-color);
 }
 
 /* mục khám phá*/
@@ -984,6 +1023,7 @@ body {
 
 .discover-recently-item {
     width: 110px;
+    position: relative;
 }
 
 .discover-recently-item-link {
@@ -992,6 +1032,10 @@ body {
     border-radius:5px;
     display: inline-block;
     overflow: hidden;
+}
+
+.discover-recently-item-link:hover .absolute-icon {
+    display: block;
 }
 
 .discover-recently__list-img {
@@ -1034,6 +1078,7 @@ body {
 
 .list-5-item__item {
     width: 160px;
+    position: relative;
 }
 
 .list-5-item-link {
@@ -1042,6 +1087,10 @@ body {
     border-radius: 5px;
     display: inline-block;
     overflow: hidden;
+}
+
+.list-5-item-link:hover .absolute-icon-5{
+    display: block;
 }
 
 .list-5-item__item-img {
@@ -1128,7 +1177,7 @@ body {
     top: 32px;
     left: 30px;
 }
-.zom-img:hover .absolute-icon-7 {
+.hover-zom:hover .absolute-icon-7 {
     display: block;
 }
 
