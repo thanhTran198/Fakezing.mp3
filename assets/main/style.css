@@ -524,6 +524,77 @@ body {
     border-radius: 3px;
 }
 
+/* thông báo bắn ra */
+.notification {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 10;
+}
+.toast {
+    margin: 16px 0;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid #ffee00;
+    padding: 16px 0;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInLeft ease 0.3s, faceOut linear 1s 2.8s forwards;
+    transition: all linear .4s;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    top {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes faceOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast-icon, .toast-close {
+    padding: 0 16px;
+}
+.toast-icon {
+    color: #ffee00;
+}
+
+.toast-icon-warning {
+    font-size: 24px;
+}
+.toast-body {
+    flex-grow: 1;
+}
+.toast-title {
+    font-size:16px;
+    color: #333;
+    margin-bottom: 4px;
+}
+.toast-msg {
+    font-size:14px;
+    color: #888;
+}
+.toast-close {
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+}
+.toast-close:active {
+    opacity: 0.6;
+}
+.toast-close-icon {
+    font-size: 16px;
+}
+
 /* topic cá nhân */
 .topic-content__individual {
     text-align: center;

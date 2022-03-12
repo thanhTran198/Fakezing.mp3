@@ -24,24 +24,24 @@
             <img class="category-logo__img" src="./assets/img/logo-mp3.svg" alt="logo-zing.mp3">
         </div>
         <ul class="category-individual">
-            <li class="hover category__napbar-item category-user ">
+            <li class="hover category__napbar-item category-user developed">
                 <i class="mp-icon fas fa-sliders-h"></i>
                 Cá Nhân
             </li>
-            <li class="hover category__napbar-item category-discover category__active">
+            <li class="hover category__napbar-item category-discover developed category__active">
                 <i class="mp-icon far fa-dot-circle"></i>
                 Khám Phá
             </li>
-            <li class="hover category__napbar-item category-zingchart">
+            <li onclick="showNotifications()" class="hover category__napbar-item category-zingchart">
                 <i class="mp-icon fab fa-stumbleupon-circle"></i>
                 #zingchart
             </li>
-            <li class="hover category__napbar-item category-live category-radio">
+            <li onclick="showNotifications()" class="hover category__napbar-item category-live category-radio">
                 <i class="mp-icon far fa-play-circle category-radio"></i>
                 Radio
                 <p class="category-live-active">live</p>
             </li>
-            <li class="hover category__napbar-item category-folow">
+            <li onclick="showNotifications()" class="hover category__napbar-item category-folow">
                 <i class="mp-icon fas fa-th-large"></i>
                 Theo Dõi
             </li>
@@ -49,41 +49,41 @@
         <div class="seperate"></div>
         <div class="slide-genre">
             <ul class="category-new-music">
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon fas fa-music"></i>
                     Nhạc Mới
                 </li>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon fas fa-icons"></i>
                     Thể Loại
     
                 </li>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon far fa-star"></i>
                     Top 100
     
                 </li>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon far fa-play-circle"></i>
                     MV
     
                 </li>
-                <div class="upgrade">
+                <div onclick="showNotifications()" class="upgrade">
                     <p class="upgrade-text">Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
                     <p class="upgrade-vip">NÂNG CẤP VIP</p> 
                 </div>
             </ul>
             <ul class="library">
                 <h3 class="library-text category__napbar-item">THƯ VIỆN</h3>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon fas fa-music"></i>
                     Bài hát
                 </li>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon fas fa-list-ol"></i>
                     Playlist
                 </li>
-                <li class="hover category__napbar-item">
+                <li onclick="showNotifications()" class="hover category__napbar-item">
                     <i class="mp-icon fas fa-clock"></i>
                     Gần đây
                 </li>
@@ -188,6 +188,22 @@
                         <p classs=""></p>
                     </duv>
                 </div>
+            </div>
+
+            <!-- thông báo khi ứng dụng chưa được phát triển -->
+            <div class="notification">
+                <!-- <div class="toast">
+                    <div class="toast-icon">
+                        <i class="fa-solid fa-circle-exclamation toast-icon-warning"></i>
+                    </div>
+                    <div class="toast-body">
+                        <h3 class="toast-title">ứng dụng chưa được phát triển</h3>
+                        <p class="toast-msg">bạn vui lòng chọn mục khác</p>
+                    </div>
+                    <div class="toast-close">
+                        <i class="fa-solid fa-xmark toast-close-icon"></i>
+                    </div>
+                </div> -->
             </div>
 
             <!-- mục khám phá -->

@@ -1,29 +1,28 @@
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
-var $$$ = document.getElementById.bind(document);
 
 
 
 
-var individualChilds = $$('.topic-content__individual-option__li');
-var subindividualChilds = $$('.individual-child__sub');
-var chanNames = $$('.change-item');
-var categoryNapbarItems = $$('.category__napbar-item');
-var subCategaryItem = $$('.sub-categery__item');
+const individualChilds = $$('.topic-content__individual-option__li');
+const subindividualChilds = $$('.individual-child__sub');
+const chanNames = $$('.change-item');
+const categoryNapbarItems = $$('.category__napbar-item');
+const subCategaryItem = $$('.sub-categery__item');
+const developeds = $$('.developed')
 
 //  thêm active bên trái khi click vào
-categoryNapbarItems.forEach((categoryNapbarItem, index) => {
-    const subCategoryNapbarItem = subCategaryItem[index];
-    categoryNapbarItem.onclick = function() {
-        console.log(categoryNapbarItem)
-        $('.category__napbar-item.category__active').classList.remove('category__active');
+developeds.forEach((developed, index) => {
+    developed.onclick = function() {
+        console.log(this)
+        $('.developed.category__active').classList.remove('category__active');
 
         this.classList.add('category__active');
 
-        if(categoryNapbarItem.innerText == 'Cá Nhân') {
+        if(developed.innerText == 'Cá Nhân') {
             $('.topic-content__individual').style.display = 'block';
             $('.discover').style.display = 'none'
-        }else if(categoryNapbarItem.innerText == 'Khám Phá') {
+        }else if(developed.innerText == 'Khám Phá') {
             $('.topic-content__individual').style.display = 'none';
             $('.discover').style.display = 'block'
         }
@@ -56,15 +55,15 @@ function topicIndividual() {
 chanNames.forEach((chanName, index) => {
     chanName.onclick = function() {
         const textChanName = chanName.innerText;
-        const artist = $$$('change-name').innerText;
+        const artist = document.getElementById('change-name').innerText;
         
         //đổi tên cho nhau
-        $$$('change-name').innerText = textChanName;
+        document.getElementById('change-name').innerText = textChanName;
         chanName.innerText = artist;
 
         //chuyển active về chanName
         $('.topic-content__individual-option__li.active').classList.remove('active');
-        $$$('change-name').classList.add('active');
+        document.getElementById('change-name').classList.add('active');
 
         //ẩn đi cửa sổ danh mục cá nhân
         $('.topic-content__individual-option__li-icon--sub').style.display = 'none';
@@ -77,11 +76,47 @@ hoverTheSongs.forEach((hoverTheSong)=> {
     hoverTheSong.onmouseover = function() {
         hoverTheSong.style = "background-color:rgba(255, 255, 255, 0.123);"
     }
-}) // sửa lại phần hover ở trên thanh bên phải tìm kiếm
+})
 
 
-
-
+// click vào các mục chưa cài đặt sẽ bắn ra thông báo
+function toast({
+    title = '',
+    message = ''
+}) {
+    const notification = $('.notification')
+    if(notification) {
+        const toast = document.createElement('div')
+        toast.onclick = function(e) {
+            if(e.target.closest('.toast-close')) {
+                notification.removeChild(toast);
+            }
+        }
+        toast.classList.add('toast')
+        toast.innerHTML = `
+            <div class="toast-icon">
+                <i class="fa-solid fa-circle-exclamation toast-icon-warning"></i>
+            </div>
+            <div class="toast-body">
+                <h3 class="toast-title">${title}</h3>
+                <p class="toast-msg">${message}</p>
+            </div>
+            <div class="toast-close">
+                <i class="fa-solid fa-xmark toast-close-icon"></i>
+            </div>
+        `;
+        notification.appendChild(toast)
+        setTimeout(function() {
+            notification.removeChild(toast);
+        }, 3500)
+    }
+}
+function showNotifications() {
+    toast({
+        title: 'ứng dụng chưa được phát triển',
+        message: 'bạn vui lòng chọn mục khác'
+    })
+}
 
 // zingchart - line chart
 var xValues = ['11:00','13:00',"15:00",'17:00','19:00','21:00','23:00','01:00','03:00','05:00','07:00','09:00'];
@@ -152,7 +187,6 @@ const prevBtn = $('.directional-icon-right')
 motionProcessing = function() {
     imgSliderDiscovers.forEach(()=>{
         if(sttImg == 1) {
-            console.log('số 1')
             imgSliderDiscover1.style.transform = 'translateX(100%)';
             imgSliderDiscover1.style.opacity = '1';
     
@@ -165,7 +199,6 @@ motionProcessing = function() {
             imgSliderDiscover4.style.transform = 'translateX(-100%)';
             imgSliderDiscover4.style.opacity = '1';
         }else if(sttImg == 2) {
-            console.log('số 2')
             imgSliderDiscover2.style.transform = 'translateX(0%)';
             imgSliderDiscover2.style.opacity = '1';
 
@@ -178,7 +211,6 @@ motionProcessing = function() {
             imgSliderDiscover1.style.transform = 'translateX(200%)';
             imgSliderDiscover1.style.opacity = '1';
         }else if(sttImg == 3) {
-            console.log('số 3')
             imgSliderDiscover3.style.transform = 'translateX(-100%)';
             imgSliderDiscover3.style.opacity = '1';
 
@@ -191,7 +223,6 @@ motionProcessing = function() {
             imgSliderDiscover2.style.opacity = '1';
 
         }else if(sttImg == 4) {
-            console.log('số 4')
             imgSliderDiscover4.style.transform = 'translateX(-200%)';
             imgSliderDiscover4.style.opacity = '1';
 
@@ -203,23 +234,7 @@ motionProcessing = function() {
             
             imgSliderDiscover3.style.transform = 'translateX(0%)';
             imgSliderDiscover3.style.opacity = '1';
-            // presently = function () {
-            //     imgSliderDiscover2.style.opacity = '3';
-            //     imgSliderDiscover4.style.opacity = '1';
-            // }
-            // setTimeout(presently, 5000)
         }
-        // }else if(sttImg == 5) {
-        //     console.log('số 5')
-        //     imgSliderDiscover1.style.transform = 'translateX(100%)';
-        //     imgSliderDiscover1.style.opacity = '0';
-    
-        //     imgSliderDiscover2.style.transform = 'translateX(-100%)';
-    
-        //     imgSliderDiscover3.style.transform = 'translateX(-100%)';
-    
-        //     imgSliderDiscover4.style.transform = 'translateX(-100%)';
-        // }
     })
 }
 // xử lý dảo ảnh cho slider 
