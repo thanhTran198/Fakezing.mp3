@@ -969,7 +969,7 @@ body {
 }
 .discover-animation {
     position: relative;
-    width: 100%;
+    width: 109%;
     height: 168px;
     display: flex;
     overflow: hidden;
@@ -995,7 +995,7 @@ body {
     width: 280px;
     height: 168px;
     border-radius:8px;
-    margin: 0 15px;
+    margin: 0 17px;
 }
 
 /* hover nổi lên 2 nút click */
@@ -1003,7 +1003,7 @@ body {
     position: absolute;
     top: 32%;
     left: 40px;
-    width: 90%;
+    width: 86%;
     display: none;
 }
 .directional {
