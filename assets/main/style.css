@@ -885,7 +885,8 @@ body {
 }
 
 .playlists__child-next--item {
-    padding: 8px;
+    padding: 8px; 
+    cursor: pointer;
     border-radius: 5px;
 }
 .playlists__child-next--item:active {
